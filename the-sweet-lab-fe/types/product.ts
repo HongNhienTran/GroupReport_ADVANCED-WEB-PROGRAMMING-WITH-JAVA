@@ -22,5 +22,7 @@ export interface Category {
     productCount: number;
     slug: string;
     backgroundColor: string;
-    imageUrl: string; 
+    imageUrl: string; // Ảnh nhỏ dùng cho card danh mục
+    description: string; // Mô tả chi tiết ngành hàng
+    bannerUrl: string;
 }
