@@ -7,7 +7,7 @@ const mockCategories: Category[] = [
         productCount: 12,
         slug: 'socola-lanh-manh',
         backgroundColor: 'bg-emerald-50',
-        imageUrl: '/categories/Socola.png' ,
+        imageUrl: '/categories/Socola.png',
         description: 'Khám phá các dòng sản phẩm socola organic, 100% tự nhiên, không đường hóa học và an toàn cho sức khỏe.',
         bannerUrl: '/categories/Socola.png'
     },
