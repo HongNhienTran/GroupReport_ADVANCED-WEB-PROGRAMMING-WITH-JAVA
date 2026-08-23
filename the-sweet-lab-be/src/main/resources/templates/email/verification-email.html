@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xác thực tài khoản The Sweet Lab</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8fafc;
+            margin: 0;
+            padding: 0;
+            color: #334155;
+        }
+        .container {
+            max-width: 600px;
+            margin: 30px auto;
+            background: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+        }
+        .header {
+            background: linear-gradient(135deg, #059669, #10b981);
+            padding: 35px 20px;
+            text-align: center;
+            color: #ffffff;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        .header p {
+            margin: 6px 0 0;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        .content {
+            padding: 35px 30px;
+            line-height: 1.6;
+        }
+        .greeting {
+            font-size: 18px;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 15px;
+        }
+        .description {
+            color: #475569;
+            margin-bottom: 25px;
+            font-size: 15px;
+        }
+        .token-box {
+            background-color: #f0fdf4;
+            border: 2px dashed #86efac;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            margin: 25px 0;
+        }
+        .token-code {
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: 4px;
+            color: #059669;
+            user-select: all;
+        }
+        .button-wrap {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #059669, #10b981);
+            color: #ffffff !important;
+            text-decoration: none;
+            padding: 14px 32px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 50px;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+        .note {
+            font-size: 13px;
+            color: #94a3b8;
+            margin-top: 25px;
+            text-align: center;
+            border-top: 1px solid #f1f5f9;
+            padding-top: 20px;
+        }
+        .footer {
+            background-color: #f8fafc;
+            padding: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #64748b;
+            border-top: 1px solid #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>THE SWEET LAB</h1>
+            <p>Healthy Sweets & Mindful Treats</p>
+        </div>
+        <div class="content">
+            <div class="greeting">Xin chào <span th:text="${recipientName}">Bạn</span>,</div>
+            <p class="description">
+                Chào mừng bạn đến với <strong>The Sweet Lab</strong> - thế giới bánh kẹo và socola healthy, ít đường, chuẩn dinh dưỡng và calo!
+                Để hoàn tất đăng ký và bắt đầu trải nghiệm mua sắm, vui lòng kích hoạt tài khoản của bạn.
+            </p>
+
+            <div class="button-wrap">
+                <a th:href="${verificationUrl}" class="btn" target="_blank">Kích hoạt tài khoản ngay</a>
+            </div>
+
+            <div class="token-box">
+                <div style="font-size: 13px; color: #64748b; margin-bottom: 5px;">Hoặc sử dụng mã xác thực (OTP / Token) bên dưới:</div>
+                <div class="token-code" th:text="${verificationToken}">SWEET-123456</div>
+            </div>
+
+            <p class="note">
+                Liên kết và mã xác thực có hiệu lực trong vòng <strong th:text="${expirationMinutes}">15</strong> phút.<br>
+                Nếu bạn không thực hiện yêu cầu này, vui lòng bỏ qua email.
+            </p>
+        </div>
+        <div class="footer">
+            &copy; 2026 The Sweet Lab. All rights reserved.<br>
+            Hotline: 1900 1234 | Email: support@thesweetlab.com
+        </div>
+    </div>
+</body>
+</html>
