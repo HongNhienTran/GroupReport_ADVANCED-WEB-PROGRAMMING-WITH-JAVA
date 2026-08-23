@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: sweet_lab_postgres
+    restart: always
+    environment:
+      POSTGRES_DB: the_sweet_lab_db
+      POSTGRES_USER: sweetlab_user
+      POSTGRES_PASSWORD: sweetlab_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - sweet_lab_network
+
+  redis:
+    image: redis:7-alpine
+    container_name: sweet_lab_redis
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - sweet_lab_network
+
+  mailpit:
+    image: axllent/mailpit:latest
+    container_name: sweet_lab_mailpit
+    restart: always
+    ports:
+      - "1025:1025" # SMTP port
+      - "8025:8025" # Web UI port to view received emails
+    networks:
+      - sweet_lab_network
+
+volumes:
+  postgres_data:
+  redis_data:
+
+networks:
+  sweet_lab_network:
+    driver: bridge
