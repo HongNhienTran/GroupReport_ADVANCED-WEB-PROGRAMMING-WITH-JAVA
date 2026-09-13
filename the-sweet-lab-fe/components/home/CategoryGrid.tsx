@@ -72,7 +72,7 @@ export default function CategoryGrid({ categories }: CategoryGridProps) {
     return (
         <section
             id="categories"
-            className="max-w-7xl mx-auto px-4 sm:px-6 my-10 md:my-16 select-none"
+            className="max-w-7xl mx-auto px-4 sm:px-6 my-14 md:my-20 select-none"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
         >
@@ -81,9 +81,6 @@ export default function CategoryGrid({ categories }: CategoryGridProps) {
                 <h2 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">
                     Khám Phá Ngành Hàng Dinh Dưỡng
                 </h2>
-                <p className="text-xs sm:text-sm text-gray-500 mt-1 max-w-lg mx-auto leading-relaxed">
-                    Chọn danh mục để xem các dòng bánh kẹo healthy thuần tự nhiên và tốt cho sức khỏe
-                </p>
             </div>
 
             {/* 2. Container Coverflow 3 Cards (Bo góc tự nhiên rounded-2xl, chuyển động mượt mà) */}
@@ -100,61 +97,49 @@ export default function CategoryGrid({ categories }: CategoryGridProps) {
                 {/* Ba Cards: Trái (Nhỏ tự nhiên), Giữa (Lớn nội dung), Phải (Nhỏ tự nhiên) */}
                 <div className="w-full h-full flex items-center justify-center gap-4 sm:gap-6 md:gap-8 overflow-hidden">
 
-                    {/* --- Card Trái (Bo góc tự nhiên rounded-2xl) --- */}
+                    {/* --- Card Trái (Phong cách phẳng tự nhiên, chuyển động mượt mà) --- */}
                     <div
                         onClick={handlePrev}
                         title={`Xem ${prevCategory?.name}`}
-                        className="hidden sm:flex flex-col items-center justify-between w-36 md:w-48 lg:w-56 h-[320px] md:h-[380px] p-4 md:p-5 bg-slate-50/90 hover:bg-slate-100/90 border border-slate-200/70 rounded-2xl shadow-xs hover:shadow-sm cursor-pointer transition-all duration-700 ease-out transform scale-90 hover:scale-95 opacity-60 hover:opacity-85 flex-shrink-0"
+                        className="hidden sm:flex flex-col items-center justify-center w-36 md:w-48 lg:w-56 h-[300px] md:h-[350px] p-4 bg-slate-50/80 hover:bg-slate-100/90 border border-slate-200/60 rounded-md shadow-2xs hover:shadow-xs cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] transform scale-90 hover:scale-95 opacity-55 hover:opacity-85 flex-shrink-0"
                     >
-                        <span className="text-[10px] font-semibold text-emerald-700 uppercase tracking-wider bg-emerald-50 px-2.5 py-0.5 rounded-full flex-shrink-0">
-                            Trước đó
-                        </span>
-                        <div className="w-28 h-36 md:w-36 md:h-44 flex items-center justify-center my-auto rounded-xl overflow-hidden shadow-xs bg-white/60 flex-shrink-0">
+                        <div className="w-28 h-36 md:w-36 md:h-44 flex items-center justify-center my-auto rounded-sm overflow-hidden bg-white/60 flex-shrink-0">
                             <img
                                 src={prevCategory?.imageUrl}
                                 alt={prevCategory?.name}
-                                className="w-full h-full object-cover select-none pointer-events-none transition-transform duration-500"
+                                className="w-full h-full object-cover select-none pointer-events-none transition-transform duration-700 ease-out"
                             />
                         </div>
-                        <div className="text-center w-full flex-shrink-0 h-9 flex flex-col justify-center">
+                        <div className="text-center w-full flex-shrink-0 pt-2">
                             <h4 className="font-bold text-xs md:text-sm text-slate-700 line-clamp-1">
                                 {prevCategory?.name}
                             </h4>
-                            <p className="text-[10px] text-gray-400 mt-0.5">
-                                {prevCategory?.productCount} sản phẩm
-                            </p>
                         </div>
                     </div>
 
-                    {/* --- Card Giữa (LỚN - Cố định kích thước & bo góc rounded-2xl tự nhiên) --- */}
-                    <div className="w-full max-w-xl md:max-w-2xl lg:max-w-3xl h-[360px] sm:h-[380px] md:h-[420px] bg-slate-50/85 border border-emerald-100/60 rounded-2xl p-6 sm:p-8 md:p-10 shadow-lg shadow-slate-900/5 relative overflow-hidden transition-all duration-700 ease-out transform scale-100 z-20 flex-shrink-0">
+                    {/* --- Card Giữa (LỚN - Phong cách tự nhiên, không bo góc gượng gạo, chuyển động êm ái) --- */}
+                    <div className="w-full max-w-xl md:max-w-2xl lg:max-w-3xl h-[360px] sm:h-[380px] md:h-[420px] bg-slate-50/90 border border-slate-200/80 rounded-lg p-6 sm:p-8 md:p-10 shadow-md shadow-slate-900/5 relative overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] transform scale-100 z-20 flex-shrink-0">
                         <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-center h-full">
-                            {/* Khối ảnh bên trái (Bo góc rounded-xl tự nhiên) */}
+                            {/* Khối ảnh bên trái */}
                             <div className="flex items-center justify-center h-full relative">
-                                <div className="w-48 h-56 sm:w-56 sm:h-64 md:w-64 md:h-76 flex items-center justify-center rounded-xl overflow-hidden shadow-sm bg-white/60 flex-shrink-0">
+                                <div className="w-48 h-56 sm:w-56 sm:h-64 md:w-64 md:h-76 flex items-center justify-center rounded-md overflow-hidden shadow-xs bg-white/70 flex-shrink-0">
                                     <img
                                         key={activeCategory?.id}
                                         src={activeCategory?.bannerUrl}
                                         alt={activeCategory?.name}
-                                        className="w-full h-full object-cover select-none pointer-events-none transition-all duration-700 ease-out"
+                                        className="w-full h-full object-cover select-none pointer-events-none transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]"
                                     />
                                 </div>
                             </div>
 
-                            {/* Khối nội dung bên phải (Cố định chiều cao, chuyển động chữ mượt mà) */}
-                            <div className="flex flex-col justify-between h-full md:pl-2 text-left py-1">
-                                <div className="space-y-2.5">
-                                    <div className="inline-flex items-center gap-1.5 px-3 py-0.5 bg-emerald-100/70 text-emerald-800 text-[11px] font-bold rounded-full">
-                                        <span>Danh mục nổi bật</span>
-                                        <span>•</span>
-                                        <span>{activeCategory?.productCount} sản phẩm</span>
-                                    </div>
-
-                                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-slate-950 leading-tight tracking-tight line-clamp-2 h-14 sm:h-16 md:h-18 flex items-center transition-all duration-500">
+                            {/* Khối nội dung bên phải */}
+                            <div className="flex flex-col justify-between h-full md:pl-2 text-left py-2">
+                                <div className="space-y-3">
+                                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-slate-950 leading-tight tracking-tight line-clamp-2 h-14 sm:h-16 md:h-18 flex items-center transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]">
                                         {activeCategory?.name}
                                     </h3>
 
-                                    <p className="text-gray-500 text-xs sm:text-sm leading-relaxed line-clamp-3 h-14 sm:h-16 md:h-18 transition-all duration-500">
+                                    <p className="text-gray-600 text-xs sm:text-sm leading-relaxed line-clamp-3 h-14 sm:h-16 md:h-18 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]">
                                         {activeCategory?.description}
                                     </p>
                                 </div>
@@ -162,9 +147,9 @@ export default function CategoryGrid({ categories }: CategoryGridProps) {
                                 <div className="pt-2 mt-auto">
                                     <Link
                                         href={`/products?category=${activeCategory?.slug}`}
-                                        className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-2.5 rounded-full text-xs sm:text-sm shadow-sm hover:shadow-md hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer"
+                                        className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-2.5 rounded-lg text-xs sm:text-sm shadow-xs hover:shadow hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 cursor-pointer"
                                     >
-                                        <span>Xem Tất Cả Sản Phẩm</span>
+                                        <span>Xem Sản Phẩm</span>
                                         <ArrowRight className="w-4 h-4" />
                                     </Link>
                                 </div>
@@ -172,29 +157,23 @@ export default function CategoryGrid({ categories }: CategoryGridProps) {
                         </div>
                     </div>
 
-                    {/* --- Card Phải (Bo góc tự nhiên rounded-2xl) --- */}
+                    {/* --- Card Phải (Phong cách phẳng tự nhiên, chuyển động mượt mà) --- */}
                     <div
                         onClick={handleNext}
                         title={`Xem ${nextCategory?.name}`}
-                        className="hidden sm:flex flex-col items-center justify-between w-36 md:w-48 lg:w-56 h-[320px] md:h-[380px] p-4 md:p-5 bg-slate-50/90 hover:bg-slate-100/90 border border-slate-200/70 rounded-2xl shadow-xs hover:shadow-sm cursor-pointer transition-all duration-700 ease-out transform scale-90 hover:scale-95 opacity-60 hover:opacity-85 flex-shrink-0"
+                        className="hidden sm:flex flex-col items-center justify-center w-36 md:w-48 lg:w-56 h-[300px] md:h-[350px] p-4 bg-slate-50/80 hover:bg-slate-100/90 border border-slate-200/60 rounded-md shadow-2xs hover:shadow-xs cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] transform scale-90 hover:scale-95 opacity-55 hover:opacity-85 flex-shrink-0"
                     >
-                        <span className="text-[10px] font-semibold text-emerald-700 uppercase tracking-wider bg-emerald-50 px-2.5 py-0.5 rounded-full flex-shrink-0">
-                            Tiếp theo
-                        </span>
-                        <div className="w-28 h-36 md:w-36 md:h-44 flex items-center justify-center my-auto rounded-xl overflow-hidden shadow-xs bg-white/60 flex-shrink-0">
+                        <div className="w-28 h-36 md:w-36 md:h-44 flex items-center justify-center my-auto rounded-sm overflow-hidden bg-white/60 flex-shrink-0">
                             <img
                                 src={nextCategory?.imageUrl}
                                 alt={nextCategory?.name}
-                                className="w-full h-full object-cover select-none pointer-events-none transition-transform duration-500"
+                                className="w-full h-full object-cover select-none pointer-events-none transition-transform duration-700 ease-out"
                             />
                         </div>
-                        <div className="text-center w-full flex-shrink-0 h-9 flex flex-col justify-center">
+                        <div className="text-center w-full flex-shrink-0 pt-2">
                             <h4 className="font-bold text-xs md:text-sm text-slate-700 line-clamp-1">
                                 {nextCategory?.name}
                             </h4>
-                            <p className="text-[10px] text-gray-400 mt-0.5">
-                                {nextCategory?.productCount} sản phẩm
-                            </p>
                         </div>
                     </div>
 
@@ -219,9 +198,8 @@ export default function CategoryGrid({ categories }: CategoryGridProps) {
                             key={cat.id}
                             onClick={() => setActiveIndex(idx)}
                             aria-label={`Chọn danh mục ${cat.name}`}
-                            className={`h-2 rounded-full transition-all duration-500 cursor-pointer ${
-                                isActive ? 'w-7 bg-emerald-600' : 'w-2 bg-slate-300 hover:bg-slate-400'
-                            }`}
+                            className={`h-2 rounded-full transition-all duration-500 cursor-pointer ${isActive ? 'w-7 bg-emerald-600' : 'w-2 bg-slate-300 hover:bg-slate-400'
+                                }`}
                         />
                     );
                 })}

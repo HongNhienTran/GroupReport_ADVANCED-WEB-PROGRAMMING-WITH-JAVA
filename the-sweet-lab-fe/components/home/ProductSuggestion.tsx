@@ -34,14 +34,11 @@ export default function ProductSuggestion({ products }: ProductSuggestionProps) 
     });
 
     return (
-        <section className="max-w-7xl mx-auto px-6 my-16 md:my-20">
+        <section className="max-w-7xl mx-auto px-6 my-20 md:my-28">
             <div className="text-center mb-6">
                 <h2 className="text-2xl md:text-3xl font-black text-slate-950 tracking-tight">
                     Gợi Ý Dành Riêng Cho Bạn
                 </h2>
-                <p className="text-gray-500 text-xs sm:text-sm mt-1.5 max-w-md mx-auto">
-                    Bánh kẹo & quà tặng healthy được tuyển chọn theo tiêu chuẩn dinh dưỡng cao cấp
-                </p>
             </div>
 
             {/* Filter Tabs */}
@@ -53,11 +50,10 @@ export default function ProductSuggestion({ products }: ProductSuggestionProps) 
                             {idx > 0 && <div className="w-1 h-1 bg-gray-300 rounded-full hidden sm:block"></div>}
                             <button
                                 onClick={() => setActiveTab(tab.id)}
-                                className={`uppercase transition-all py-1.5 px-3 relative cursor-pointer ${
-                                    isActive
+                                className={`uppercase transition-all py-1.5 px-3 relative cursor-pointer ${isActive
                                         ? 'text-emerald-700 font-extrabold after:absolute after:bottom-[-13px] after:left-0 after:right-0 after:h-[2px] after:bg-emerald-700'
                                         : 'hover:text-emerald-700'
-                                }`}
+                                    }`}
                             >
                                 {tab.label}
                             </button>

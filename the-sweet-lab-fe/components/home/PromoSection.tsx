@@ -4,7 +4,7 @@ import { Truck, RotateCcw, Award, ShieldCheck, ArrowRight } from 'lucide-react';
 
 export default function PromoSection() {
     return (
-        <section className="w-full bg-slate-50/90 border-t border-slate-200/80 select-none">
+        <section className="w-full bg-slate-50/90 border-t border-slate-200/80 mt-16 md:mt-24 select-none">
             {/* Khối Banner giới thiệu chính: Chiều cao gọn gàng ~ 1/2 bản cũ, chiều rộng full trang */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 py-5 md:py-6">
                 <div className="grid grid-cols-1 md:grid-cols-12 items-center gap-6 md:gap-8">
@@ -12,9 +12,6 @@ export default function PromoSection() {
                     <div className="md:col-span-7 lg:col-span-8 flex flex-col justify-center text-left">
                         {/* Tag phụ */}
                         <div className="flex items-center gap-2 mb-1.5">
-                            <span className="text-[10px] md:text-[11px] font-black tracking-[0.18em] text-emerald-800 uppercase bg-emerald-100/70 px-2.5 py-0.5 rounded-full">
-                                THẾ GIỚI NGỌT LÀNH &bull; THE SWEET LAB
-                            </span>
                         </div>
 
                         {/* Tiêu đề chính phong cách NEW VIBES */}
@@ -53,11 +50,7 @@ export default function PromoSection() {
                             className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                         />
                         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/15 via-transparent to-transparent pointer-events-none" />
-                        
-                        <div className="absolute bottom-2 right-2 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-md border border-slate-200/80 shadow-xs text-left">
-                            <p className="text-[9px] text-gray-500 font-semibold uppercase tracking-wider">Tiêu Chuẩn</p>
-                            <p className="text-[11px] font-black text-emerald-800 leading-none">100% Thuần Tự Nhiên</p>
-                        </div>
+
                     </div>
                 </div>
             </div>

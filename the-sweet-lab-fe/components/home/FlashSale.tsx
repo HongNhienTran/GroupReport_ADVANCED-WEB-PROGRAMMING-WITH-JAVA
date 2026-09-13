@@ -8,11 +8,11 @@ interface FlashSaleProps {
 
 export default function FlashSale({ flashSales }: FlashSaleProps) {
     return (
-        <section className="max-w-7xl mx-auto px-6 py-12 text-center bg-gray-50/70 rounded-2xl my-16 md:my-20 border border-gray-100 shadow-xs">
+        <section className="max-w-7xl mx-auto px-6 py-12 text-center bg-gray-50/70 rounded-2xl my-20 md:my-28 border border-gray-100 shadow-xs">
             {/* Header đếm ngược */}
             <div className="mb-8">
                 <h2 className="text-2xl md:text-3xl font-black text-slate-950 flex items-center justify-center gap-2 tracking-tight">
-                    <span>⚡</span> Flash Sale Giờ Vàng
+                    Flash Sale Giờ Vàng
                 </h2>
                 <p className="text-xs sm:text-sm text-gray-500 mt-2 font-medium">
                     Còn lại: <span className="font-bold text-emerald-700 bg-white px-2 py-0.5 rounded border border-gray-200 shadow-xs">03</span> giờ <span className="font-bold text-emerald-700 bg-white px-2 py-0.5 rounded border border-gray-200 shadow-xs">45</span> phút <span className="font-bold text-emerald-700 bg-white px-2 py-0.5 rounded border border-gray-200 shadow-xs">12</span> giây

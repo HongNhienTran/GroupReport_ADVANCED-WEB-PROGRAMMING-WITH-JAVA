@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function HeroSection() {
     return (
-        <section className="max-w-7xl mx-auto px-6 pt-16 pb-24 md:flex items-center justify-between gap-12 relative overflow-hidden min-h-[500px]">
+        <section className="max-w-7xl mx-auto px-6 pt-12 md:pt-16 pb-16 md:pb-20 mb-8 md:mb-14 md:flex items-center justify-between gap-12 relative overflow-hidden min-h-[500px]">
             <div className="absolute inset-y-0 right-0 w-full md:w-[55%] z-0 pointer-events-none hidden md:block">
                 <svg
                     viewBox="0 0 500 500"
