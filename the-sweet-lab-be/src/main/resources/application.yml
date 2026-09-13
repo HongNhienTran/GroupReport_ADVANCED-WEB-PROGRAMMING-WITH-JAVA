@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: ${SERVER_PORT:8080}
   servlet:
     context-path: /
 
@@ -9,16 +9,16 @@ spring:
   
   # PostgreSQL Datasource
   datasource:
-    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/the_sweet_lab_db}
-    username: ${SPRING_DATASOURCE_USERNAME:sweetlab_user}
-    password: ${SPRING_DATASOURCE_PASSWORD:sweetlab_password}
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:the_sweet_lab_db}}
+    username: ${DB_USERNAME:sweetlab_user}
+    password: ${DB_PASSWORD:sweetlab_password}
     driver-class-name: org.postgresql.Driver
 
   # JPA & Hibernate
   jpa:
     hibernate:
       ddl-auto: update
-    show-sql: true
+    show-sql: false
     properties:
       hibernate:
         format_sql: true
@@ -28,16 +28,16 @@ spring:
   # Redis
   data:
     redis:
-      host: ${SPRING_REDIS_HOST:localhost}
-      port: ${SPRING_REDIS_PORT:6379}
-      password: ${SPRING_REDIS_PASSWORD:}
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PASSWORD:}
 
   # Mail Server (Mailpit by default for local testing)
   mail:
-    host: ${SPRING_MAIL_HOST:localhost}
-    port: ${SPRING_MAIL_PORT:1025}
-    username: ${SPRING_MAIL_USERNAME:}
-    password: ${SPRING_MAIL_PASSWORD:}
+    host: ${MAIL_HOST:localhost}
+    port: ${MAIL_PORT:1025}
+    username: ${MAIL_USERNAME:}
+    password: ${MAIL_PASSWORD:}
     properties:
       mail:
         smtp:
@@ -57,17 +57,17 @@ spring:
 app:
   jwt:
     # 256-bit secret key in base64 or plaintext
-    secret: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
-    access-token-expiration-ms: 86400000    # 24 hours (1 day)
-    refresh-token-expiration-ms: 604800000  # 7 days
+    secret: ${JWT_SECRET:404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970}
+    access-token-expiration-ms: ${JWT_ACCESS_TOKEN_EXPIRATION_MS:86400000}    # 24 hours (1 day)
+    refresh-token-expiration-ms: ${JWT_REFRESH_TOKEN_EXPIRATION_MS:604800000}  # 7 days
   mail:
-    from: "The Sweet Lab <no-reply@thesweetlab.com>"
-    verification-url: "http://localhost:3000/verify-email"
-    verification-token-expiration-minutes: 15
+    from: ${MAIL_FROM:The Sweet Lab <no-reply@thesweetlab.com>}
+    verification-url: ${MAIL_VERIFICATION_URL:http://localhost:3000/verify-email}
+    verification-token-expiration-minutes: ${MAIL_VERIFICATION_TOKEN_EXPIRATION_MINUTES:15}
   cors:
-    allowed-origins:
-      - "http://localhost:3000"
-      - "http://127.0.0.1:3000"
+    allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:3000,http://127.0.0.1:3000}
+  ai:
+    gemini-api-key: ${GEMINI_API_KEY:}
 
 # Springdoc OpenAPI (Swagger 3)
 springdoc:

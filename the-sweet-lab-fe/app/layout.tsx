@@ -1,6 +1,7 @@
 import './globals.css';
 import Navbar from '@/components/common/Navbar';
 import Footer from '@/components/common/Footer'; // Import Footer vào đây
+import SweetieMascot from '@/components/common/SweetieMascot';
 
 export const metadata = {
   title: 'The Sweet Lab - Healthy Sweets & Chocolates',
@@ -20,6 +21,7 @@ export default function RootLayout({
           <main>{children}</main>
         </div>
         <Footer /> 
+        <SweetieMascot />
       </body>
     </html>
   );

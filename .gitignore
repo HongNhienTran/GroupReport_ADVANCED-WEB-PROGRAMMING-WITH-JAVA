@@ -1,0 +1,15 @@
+# Documentation (Local only)
+docs/
+
+# IDE & OS
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+
+# Environment Variables & Secrets
+.env
+.env.local
+*.env
+!.env.example

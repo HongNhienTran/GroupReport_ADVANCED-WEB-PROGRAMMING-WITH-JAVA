@@ -73,6 +73,7 @@ public class SecurityConfig {
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(PUBLIC_ENDPOINTS).permitAll()
+                        .requestMatchers(HttpMethod.GET, "/api/v1/categories/**").permitAll() // Khách xem danh mục
                         .requestMatchers(HttpMethod.GET, "/api/v1/products/**").permitAll() // Khách xem sản phẩm
                         .anyRequest().authenticated()
                 )

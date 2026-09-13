@@ -1,8 +1,9 @@
 import React from 'react';
+import Link from 'next/link';
 
 export default function HeroSection() {
     return (
-        <section className="max-w-7xl mx-auto px-6 pt-16 pb-24 md:flex items-center justify-between gap-12 relative overflow-hidden min-h-[500px]">
+        <section className="max-w-7xl mx-auto px-6 pt-12 md:pt-16 pb-16 md:pb-20 mb-8 md:mb-14 md:flex items-center justify-between gap-12 relative overflow-hidden min-h-[500px]">
             <div className="absolute inset-y-0 right-0 w-full md:w-[55%] z-0 pointer-events-none hidden md:block">
                 <svg
                     viewBox="0 0 500 500"
@@ -26,25 +27,26 @@ export default function HeroSection() {
                     Bật công tắc ngọt lành, xua tan ngày mệt mỏi. Ăn vặt thuần tự nhiên, nuông chiều cơ thể đúng cách.
                 </p>
                 <div className="pt-2">
-                    <button className="bg-emerald-600 hover:bg-emerald-700 md:bg-emerald-600 md:hover:bg-emerald-700 bg-white text-slate-900 md:text-white font-bold px-8 py-3 rounded-full transition-all shadow-md shadow-emerald-900/10 hover:shadow-xl hover:scale-[1.02] text-sm">
-                        Mua Ngay
-                    </button>
+                    <Link
+                        href="#categories"
+                        className="inline-block bg-emerald-600 hover:bg-emerald-700 md:bg-emerald-600 md:hover:bg-emerald-700 bg-white text-slate-900 md:text-white font-bold px-8 py-3 rounded-full transition-all shadow-md shadow-emerald-900/10 hover:shadow-xl hover:scale-[1.02] text-sm"
+                    >
+                        Khám Phá Ngay
+                    </Link>
                 </div>
             </div>
 
             <div className="mt-12 md:mt-0 relative w-full md:w-[480px] h-[420px] flex items-center justify-center z-10">
-                <div className="w-[360px] h-[360px] bg-white rounded-full border-4 border-white/40 flex items-center justify-center animate-float-main group cursor-pointer">
-                    <div className="relative w-[420px] h-[300px] flex-shrink-0 flex items-center justify-center group-hover:scale-[1.04] transition-transform duration-500 select-none"
-                    >
+                <div className="w-[360px] h-[360px] bg-white rounded-full border-4 border-white/40 flex items-center justify-center group cursor-pointer">
+                    <div className="relative w-[420px] h-[300px] flex-shrink-0 flex items-center justify-center group-hover:scale-[1.04] transition-transform duration-500 select-none">
                         <img
                             src="/Hero_Img.png"
                             alt="Fruits Platter"
-                            className="w-full h-full object-covers"
+                            className="w-full h-full object-cover"
                         />
                     </div>
                 </div>
             </div>
-
         </section>
     );
 }
