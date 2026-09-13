@@ -1,9 +1,9 @@
 import React from 'react';
-import HeroSection from './_components/HeroSection';
-import CategoryGrid from './_components/CategoryGrid';
-import FlashSale from './_components/FlashSale';
-import ProductSuggestion from './_components/ProductSuggestion'; // 1. Import component mới tách
-import PromoSection from './_components/PromoSection';
+import HeroSection from '@/components/home/HeroSection';
+import CategoryGrid from '@/components/home/CategoryGrid';
+import FlashSale from '@/components/home/FlashSale';
+import ProductSuggestion from '@/components/home/ProductSuggestion';
+import PromoSection from '@/components/home/PromoSection';
 import { productService } from '@/services/productService';
 
 export default async function HomePage() {
@@ -12,7 +12,7 @@ export default async function HomePage() {
   const products = await productService.getFeaturedProducts();
 
   return (
-    <div className="bg-white min-h-screen pb-20 font-sans selection:bg-emerald-100">
+    <div className="bg-white min-h-screen font-sans selection:bg-emerald-100">
 
       {/* 1. Hero Welcome Banner */}
       <HeroSection />

@@ -17,29 +17,3 @@ body {
   font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
-
-/* ==================== HIỆU ỨNG ĐỘNG DÀNH CHO HERO SECTION ==================== */
-
-/* 1. Hiệu ứng bồng bềnh cho mâm sản phẩm chính */
-@keyframes float {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-15px) rotate(1deg); }
-}
-
-/* 2. Hiệu ứng dập dềnh lơ lửng cho các icon lá cây nhỏ xung quanh */
-@keyframes float-slow {
-  0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); }
-  50% { transform: translateY(-8px) translateX(4px) rotate(8deg); }
-}
-
-.animate-float-main {
-  animation: float 6s ease-in-out infinite;
-}
-
-.animate-float-leaf-1 {
-  animation: float-slow 5s ease-in-out infinite;
-}
-
-.animate-float-leaf-2 {
-  animation: float-slow 7s ease-in-out infinite 1s; /* delay 1s để chuyển động lệch pha tự nhiên */
-}
