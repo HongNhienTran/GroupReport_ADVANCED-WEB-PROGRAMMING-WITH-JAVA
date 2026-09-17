@@ -12,6 +12,28 @@ export interface ProductNutrition {
     ingredients?: string;
 }
 
+export interface Brand {
+    id: string;
+    name: string;
+    slug: string;
+    logoUrl?: string;
+    description?: string;
+    originCountry?: string;
+    websiteUrl?: string;
+}
+
+export interface ProductVariant {
+    id: string;
+    name: string;
+    sku: string;
+    price: number;
+    originalPrice?: number;
+    stockQuantity: number;
+    imageUrl?: string;
+    displayOrder?: number;
+    inStock: boolean;
+}
+
 export interface Product {
     id: string | number;
     name: string;
@@ -27,6 +49,7 @@ export interface Product {
     categoryName?: string;
     categorySlug?: string;
     brand?: string;
+    brandDetail?: Brand;
     origin?: string;
     cocoaPercentage?: number;
     dietaryTags?: string[];
@@ -38,6 +61,7 @@ export interface Product {
     status?: string;
     nutrition?: ProductNutrition;
     images?: string[];
+    variants?: ProductVariant[];
 }
 
 export interface FlashSaleProduct {

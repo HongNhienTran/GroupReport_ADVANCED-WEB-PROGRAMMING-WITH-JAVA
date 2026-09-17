@@ -1,0 +1,220 @@
+{
+  "category": {
+    "name": "Bánh Quy & Bánh Nướng Organic",
+    "slug": "banh-quy-banh-nuong-organic",
+    "description": "Bánh nướng ngũ cốc nguyên cám, ít ngọt, không chất béo xấu, cung cấp năng lượng sạch dồi dào",
+    "imageUrl": "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?q=80&w=800",
+    "bannerUrl": "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?q=80&w=1200",
+    "displayOrder": 2
+  },
+  "products": [
+    {
+      "name": "Bánh Biscotti Hạt Dinh Dưỡng NutriBloom Không Đường",
+      "slug": "biscotti-hat-dinh-duong-nutribloom-khong-duong",
+      "sku": "SWL-BAKE-001",
+      "price": 110000,
+      "originalPrice": 125000,
+      "stockQuantity": 100,
+      "description": "Bánh quy nướng giòn 2 lần chuẩn phong cách Ý từ NutriBloom. Công thức thuần chay không dùng bơ sữa động vật và không đường tinh luyện, bổ sung nguồn đạm thực vật và chất xơ dồi dào từ hạnh nhân, hạt óc chó và quả nam việt quất sấy mộc.",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?q=80&w=800",
+      "brand": "NutriBloom",
+      "origin": "Việt Nam",
+      "cocoaPercentage": null,
+      "dietaryTags": ["SUGAR_FREE", "LOW_CARB", "ORGANIC"],
+      "isFeatured": true,
+      "isFlashSale": false,
+      "rating": 4.9,
+      "images": [
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?q=80&w=800",
+          "altText": "Hũ bánh biscotti giòn rụm nhiều hạt dinh dưỡng",
+          "displayOrder": 1
+        },
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=800",
+          "altText": "Lát bánh biscotti vàng ươm nướng giòn rụm",
+          "displayOrder": 2
+        }
+      ],
+      "variants": [
+        {
+          "name": "Hũ 250g Tiêu Chuẩn",
+          "sku": "SWL-BAKE-001-250G",
+          "price": 110000,
+          "originalPrice": 125000,
+          "stockQuantity": 60,
+          "imageUrl": "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?q=80&w=800",
+          "displayOrder": 1
+        },
+        {
+          "name": "Hũ 500g Tiết Kiệm",
+          "sku": "SWL-BAKE-001-500G",
+          "price": 205000,
+          "originalPrice": 235000,
+          "stockQuantity": 40,
+          "imageUrl": "https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=800",
+          "displayOrder": 2
+        }
+      ],
+      "nutrition": {
+        "servingSize": "50g (khoảng 4-5 lát bánh)",
+        "calories": 185.0,
+        "proteinG": 6.8,
+        "fatG": 8.5,
+        "saturatedFatG": 1.2,
+        "carbsG": 20.5,
+        "sugarG": 3.0,
+        "fiberG": 4.2,
+        "sodiumMg": 25.0,
+        "allergens": "Chứa hạt hạnh nhân, óc chó, bột mì nguyên cám",
+        "ingredients": "Bột mì nguyên cám hữu cơ, lòng trắng trứng gà tươi, hạt hạnh nhân Mỹ, hạt dẻ cười, nam việt quất sấy mộc, đường ăn kiêng cỏ ngọt Stevia"
+      }
+    },
+    {
+      "name": "Bánh Cookies Yến Mạch Socola Chip AuraBake Clean Treats",
+      "slug": "banh-cookies-yen-mach-socola-chip-aurabake",
+      "sku": "SWL-BAKE-002",
+      "price": 95000,
+      "originalPrice": 110000,
+      "stockQuantity": 85,
+      "description": "Bánh cookies yến mạch nguyên cám xốp mềm kết hợp các viên socola chip 70% đậm vị từ thương hiệu AuraBake. Làm ngọt tự nhiên bằng mật ong hoa rừng và chuối chín, cung cấp tinh bột hấp thu chậm cho các buổi tập thể thao bền bỉ.",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?q=80&w=800",
+      "brand": "AuraBake Clean Treats",
+      "origin": "Việt Nam",
+      "cocoaPercentage": null,
+      "dietaryTags": ["VEGAN", "ORGANIC", "SUGAR_FREE"],
+      "isFeatured": false,
+      "isFlashSale": true,
+      "rating": 4.8,
+      "images": [
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?q=80&w=800",
+          "altText": "Đĩa bánh cookies yến mạch socola chip thơm phức",
+          "displayOrder": 1
+        },
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?q=80&w=800",
+          "altText": "Chiếc bánh cookies giòn tan bẻ đôi lộ rõ yến mạch và socola",
+          "displayOrder": 2
+        }
+      ],
+      "variants": [
+        {
+          "name": "Hộp 6 Bánh Vị Cacao Truyền Thống",
+          "sku": "SWL-BAKE-002-CACAO",
+          "price": 95000,
+          "originalPrice": 110000,
+          "stockQuantity": 50,
+          "imageUrl": "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?q=80&w=800",
+          "displayOrder": 1
+        },
+        {
+          "name": "Hộp 6 Bánh Vị Matcha Hạnh Nhân",
+          "sku": "SWL-BAKE-002-MATCHA",
+          "price": 105000,
+          "originalPrice": 120000,
+          "stockQuantity": 35,
+          "imageUrl": "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?q=80&w=800",
+          "displayOrder": 2
+        }
+      ],
+      "nutrition": {
+        "servingSize": "40g (2 chiếc bánh)",
+        "calories": 155.0,
+        "proteinG": 4.5,
+        "fatG": 5.5,
+        "saturatedFatG": 1.8,
+        "carbsG": 22.0,
+        "sugarG": 2.8,
+        "fiberG": 3.6,
+        "sodiumMg": 20.0,
+        "allergens": "Chứa yến mạch và hạt chia",
+        "ingredients": "Yến mạch cán dẹt nguyên cám, chuối tây chín sấy lạnh, socola chip đen 70%, bột quế Ceylon, mật ong rừng, dầu dừa nguyên chất"
+      }
+    },
+    {
+      "name": "Bánh Ngói Hạnh Nhân Tuiles KetoFlora Bột Hạnh Nhân Siêu Mỏng",
+      "slug": "banh-ngoi-hanh-nhan-ketoflora-gluten-free",
+      "sku": "SWL-BAKE-003",
+      "price": 125000,
+      "originalPrice": 140000,
+      "stockQuantity": 70,
+      "description": "Bánh ngói hạnh nhân lát mỏng tang giòn rụm từ KetoFlora, 100% không bột mì (Gluten-Free). Sản phẩm được nướng từ lòng trắng trứng gà tươi và bột hạnh nhân cao cấp, vị ngọt thanh mát từ quả La Hán Quả thích hợp tuyệt đối cho người ăn kiêng Keto và tiểu đường.",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1597528662465-55ece5734101?q=80&w=800",
+      "brand": "KetoFlora",
+      "origin": "Việt Nam",
+      "cocoaPercentage": null,
+      "dietaryTags": ["KETO", "SUGAR_FREE", "LOW_CARB", "ORGANIC"],
+      "isFeatured": true,
+      "isFlashSale": false,
+      "rating": 4.9,
+      "images": [
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1597528662465-55ece5734101?q=80&w=800",
+          "altText": "Bánh ngói hạnh nhân KetoFlora vàng óng giòn rụm",
+          "displayOrder": 1
+        },
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1587314168485-3236d6710814?q=80&w=800",
+          "altText": "Từng lát bánh ngói mỏng tang phủ đầy hạnh nhân",
+          "displayOrder": 2
+        }
+      ],
+      "nutrition": {
+        "servingSize": "35g (khoảng 6-8 lát bánh)",
+        "calories": 160.0,
+        "proteinG": 5.8,
+        "fatG": 14.0,
+        "saturatedFatG": 1.5,
+        "carbsG": 3.2,
+        "sugarG": 0.8,
+        "fiberG": 2.5,
+        "sodiumMg": 15.0,
+        "allergens": "Chứa lòng trắng trứng gà và hạnh nhân",
+        "ingredients": "Hạnh nhân lát Mỹ (65%), lòng trắng trứng gà ta, bơ thực vật hữu cơ, chiết xuất quả La Hán Quả (Monk Fruit)"
+      }
+    },
+    {
+      "name": "Thanh Hạt Dinh Dưỡng Granola Bar NutriBloom Vị Nam Việt Quất",
+      "slug": "thanh-hat-granola-bar-nutribloom-nam-viet-quat",
+      "sku": "SWL-BAKE-004",
+      "price": 85000,
+      "originalPrice": 95000,
+      "stockQuantity": 120,
+      "description": "Thanh năng lượng sạch tiện lợi từ NutriBloom, kết hợp 6 loại hạt dinh dưỡng (hạt điều, bí xanh, óc chó, chia, hướng dương, yến mạch) kết dính bằng mật hoa dừa tự nhiên và vị chua thanh dịu mát của nam việt quất Canada.",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1622484216850-410a8d423984?q=80&w=800",
+      "brand": "NutriBloom",
+      "origin": "Việt Nam",
+      "cocoaPercentage": null,
+      "dietaryTags": ["VEGAN", "ORGANIC", "LOW_CARB"],
+      "isFeatured": false,
+      "isFlashSale": false,
+      "rating": 4.7,
+      "images": [
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1622484216850-410a8d423984?q=80&w=800",
+          "altText": "Thanh hạt Granola Bar NutriBloom nhiều hạt bổ dưỡng",
+          "displayOrder": 1
+        },
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1606787366850-de6330128bfc?q=80&w=800",
+          "altText": "Cận cảnh thanh hạt dinh dưỡng giàu protein thực vật",
+          "displayOrder": 2
+        }
+      ],
+      "nutrition": {
+        "servingSize": "40g (1 thanh bar)",
+        "calories": 175.0,
+        "proteinG": 5.2,
+        "fatG": 9.8,
+        "saturatedFatG": 1.4,
+        "carbsG": 17.5,
+        "sugarG": 4.0,
+        "fiberG": 3.8,
+        "sodiumMg": 18.0,
+        "allergens": "Chứa hạt điều, óc chó và yến mạch",
+        "ingredients": "Yến mạch Úc (30%), hạt điều Bình Phước (20%), hạt bí xanh, nam việt quất hữu cơ (15%), mật hoa dừa Trà Vinh"
+      }
+    }
+  ]
+}

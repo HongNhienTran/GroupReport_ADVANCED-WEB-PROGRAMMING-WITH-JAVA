@@ -1,0 +1,220 @@
+{
+  "category": {
+    "name": "Socola & Cacao Thủ Công",
+    "slug": "socola-cacao-thu-cong",
+    "description": "Dòng socola nguyên chất bean-to-bar, nama tươi và cacao giàu chất chống oxy hóa tự nhiên",
+    "imageUrl": "https://images.unsplash.com/photo-1511381939415-e44015466834?q=80&w=800",
+    "bannerUrl": "https://images.unsplash.com/photo-1548907040-4baa42d10919?q=80&w=1200",
+    "displayOrder": 1
+  },
+  "products": [
+    {
+      "name": "Socola Đen Cacaovita 85% Nguyên Chất Đắk Lắk",
+      "slug": "socola-den-cacaovita-dak-lak-85",
+      "sku": "SWL-CHOC-001",
+      "price": 135000,
+      "originalPrice": 150000,
+      "stockQuantity": 80,
+      "description": "Socola đen thủ công cao cấp sản xuất từ hạt cacao tuyển chọn vùng Đắk Lắk, vị đắng dịu xen lẫn chua thanh thảo mộc tự nhiên. Giàu polyphenol chống oxy hóa, lý tưởng cho người ăn kiêng, tập gym và kiểm soát đường huyết.",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1548907040-4baa42d10919?q=80&w=800",
+      "brand": "Cacaovita",
+      "origin": "Việt Nam",
+      "cocoaPercentage": 85,
+      "dietaryTags": ["SUGAR_FREE", "VEGAN", "KETO", "ORGANIC"],
+      "isFeatured": true,
+      "isFlashSale": false,
+      "rating": 4.9,
+      "images": [
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1548907040-4baa42d10919?q=80&w=800",
+          "altText": "Thanh socola đen Cacaovita 85% nguyên chất chuẩn Bean-to-bar",
+          "displayOrder": 1
+        },
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?q=80&w=800",
+          "altText": "Từng thỏi socola đen bẻ giòn rụm mịn màng",
+          "displayOrder": 2
+        }
+      ],
+      "variants": [
+        {
+          "name": "Thanh 40g Tiêu Chuẩn",
+          "sku": "SWL-CHOC-001-40G",
+          "price": 75000,
+          "originalPrice": 85000,
+          "stockQuantity": 50,
+          "imageUrl": "https://images.unsplash.com/photo-1548907040-4baa42d10919?q=80&w=800",
+          "displayOrder": 1
+        },
+        {
+          "name": "Thanh 80g Tiết Kiệm",
+          "sku": "SWL-CHOC-001-80G",
+          "price": 135000,
+          "originalPrice": 150000,
+          "stockQuantity": 30,
+          "imageUrl": "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?q=80&w=800",
+          "displayOrder": 2
+        }
+      ],
+      "nutrition": {
+        "servingSize": "40g (khoảng 1/2 thanh)",
+        "calories": 220.0,
+        "proteinG": 4.5,
+        "fatG": 18.0,
+        "saturatedFatG": 10.5,
+        "carbsG": 12.0,
+        "sugarG": 3.2,
+        "fiberG": 6.8,
+        "sodiumMg": 5.0,
+        "allergens": "Có thể chứa dấu vết của các loại hạt cây (hạnh nhân, hạt điều)",
+        "ingredients": "Hạt cacao hữu cơ Đắk Lắk (85%), bơ cacao nguyên chất, mật hoa dừa tự nhiên ít ngọt (15%)"
+      }
+    },
+    {
+      "name": "Socola Tươi Nama Thuần Chay PureChoc Artisans Vị Cốt Dừa",
+      "slug": "socola-tuoi-nama-thuan-chay-purechoc-artisans",
+      "sku": "SWL-CHOC-002",
+      "price": 165000,
+      "originalPrice": 190000,
+      "stockQuantity": 60,
+      "description": "Nama Chocolate tươi phong cách Nhật Bản phiên bản thuần chay thực vật. Hòa quyện giữa socola nguyên chất 72%, kem cốt dừa hữu cơ tươi Bến Tre béo mịn và bơ hạt phỉ, tan chảy ngay đầu lưỡi mà hoàn toàn không dùng kem sữa bò.",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1549007994-cb92caebd54b?q=80&w=800",
+      "brand": "PureChoc Artisans",
+      "origin": "Việt Nam",
+      "cocoaPercentage": 72,
+      "dietaryTags": ["VEGAN", "ORGANIC", "SUGAR_FREE"],
+      "isFeatured": true,
+      "isFlashSale": true,
+      "rating": 4.8,
+      "images": [
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1549007994-cb92caebd54b?q=80&w=800",
+          "altText": "Hộp nama chocolate PureChoc phủ lớp bột cacao mịn màng",
+          "displayOrder": 1
+        },
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1587132137056-bfbf0166836e?q=80&w=800",
+          "altText": "Từng viên socola tươi nama mềm mịn cắt khối vuông",
+          "displayOrder": 2
+        }
+      ],
+      "variants": [
+        {
+          "name": "Hộp 16 Viên Truyền Thống",
+          "sku": "SWL-CHOC-002-16P",
+          "price": 165000,
+          "originalPrice": 190000,
+          "stockQuantity": 35,
+          "imageUrl": "https://images.unsplash.com/photo-1549007994-cb92caebd54b?q=80&w=800",
+          "displayOrder": 1
+        },
+        {
+          "name": "Hộp 24 Viên Thượng Hạng",
+          "sku": "SWL-CHOC-002-24P",
+          "price": 235000,
+          "originalPrice": 260000,
+          "stockQuantity": 25,
+          "imageUrl": "https://images.unsplash.com/photo-1587132137056-bfbf0166836e?q=80&w=800",
+          "displayOrder": 2
+        }
+      ],
+      "nutrition": {
+        "servingSize": "28g (2 viên)",
+        "calories": 130.0,
+        "proteinG": 1.8,
+        "fatG": 10.2,
+        "saturatedFatG": 6.8,
+        "carbsG": 8.5,
+        "sugarG": 2.1,
+        "fiberG": 2.4,
+        "sodiumMg": 8.0,
+        "allergens": "Chứa hạt phỉ và nước cốt dừa",
+        "ingredients": "Cacao mass 72%, nước cốt dừa hữu cơ cô đặc, bơ hạt phỉ nghiền mịn, đường cỏ ngọt Stevia, bột cacao nguyên chất phủ ngoài"
+      }
+    },
+    {
+      "name": "Socola Bọc Hạnh Nhân Rang Mộc The Sweet Lab Signature",
+      "slug": "socola-boc-hanh-nhan-the-sweet-lab-signature",
+      "sku": "SWL-CHOC-003",
+      "price": 120000,
+      "originalPrice": 135000,
+      "stockQuantity": 90,
+      "description": "Hạt hạnh nhân Mỹ nhập khẩu được rang mộc thơm lừng, bao bọc bởi lớp socola đen thủ công 70% bóng mượt. Vị giòn rụm bùi béo kết hợp vị đắng thanh quyến rũ, là món ăn vặt lành mạnh tiếp thêm năng lượng cho ngày dài.",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1511381939415-e44015466834?q=80&w=800",
+      "brand": "The Sweet Lab Signature",
+      "origin": "Việt Nam",
+      "cocoaPercentage": 70,
+      "dietaryTags": ["ORGANIC", "LOW_CARB", "VEGAN"],
+      "isFeatured": false,
+      "isFlashSale": false,
+      "rating": 4.9,
+      "images": [
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1511381939415-e44015466834?q=80&w=800",
+          "altText": "Hũ thủy tinh chứa hạt hạnh nhân bọc socola giòn rụm",
+          "displayOrder": 1
+        },
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?q=80&w=800",
+          "altText": "Cận cảnh hạt hạnh nhân giòn tan phủ lớp socola đen bóng",
+          "displayOrder": 2
+        }
+      ],
+      "nutrition": {
+        "servingSize": "30g (khoảng 10-12 hạt)",
+        "calories": 165.0,
+        "proteinG": 4.2,
+        "fatG": 13.0,
+        "saturatedFatG": 4.5,
+        "carbsG": 9.0,
+        "sugarG": 2.5,
+        "fiberG": 3.8,
+        "sodiumMg": 12.0,
+        "allergens": "Chứa hạt hạnh nhân",
+        "ingredients": "Hạt hạnh nhân Mỹ sấy mộc (45%), socola đen 70% (cacao mass, bơ cacao, đường dừa organic)"
+      }
+    },
+    {
+      "name": "Bột Cacao Nguyên Chất Không Đường Cacaovita Organic",
+      "slug": "bot-cacao-nguyen-chat-khong-duong-cacaovita",
+      "sku": "SWL-CHOC-004",
+      "price": 95000,
+      "originalPrice": 110000,
+      "stockQuantity": 110,
+      "description": "100% bột cacao nguyên chất kiềm hóa nhẹ từ hạt cacao Bến Tre tuyển chọn, hương vị nồng nàn thơm ngậy tự nhiên. Không chứa đường, không pha trộn tinh bột hay hương liệu nhân tạo, thích hợp pha cacao nóng, sinh tố hoặc nướng bánh eat clean.",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?q=80&w=800",
+      "brand": "Cacaovita",
+      "origin": "Việt Nam",
+      "cocoaPercentage": 100,
+      "dietaryTags": ["SUGAR_FREE", "KETO", "ORGANIC", "VEGAN"],
+      "isFeatured": false,
+      "isFlashSale": false,
+      "rating": 4.8,
+      "images": [
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?q=80&w=800",
+          "altText": "Bột cacao nguyên chất sánh mịn trong tách gốm mộc mạc",
+          "displayOrder": 1
+        },
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1579954115545-a95591f28bfc?q=80&w=800",
+          "altText": "Muỗng gỗ múc bột cacao Cacaovita thơm nồng",
+          "displayOrder": 2
+        }
+      ],
+      "nutrition": {
+        "servingSize": "10g (khoảng 2 muỗng cà phê)",
+        "calories": 38.0,
+        "proteinG": 2.2,
+        "fatG": 1.4,
+        "saturatedFatG": 0.8,
+        "carbsG": 4.5,
+        "sugarG": 0.2,
+        "fiberG": 3.2,
+        "sodiumMg": 2.0,
+        "allergens": "Không chứa chất gây dị ứng",
+        "ingredients": "100% hạt cacao Bến Tre lên men tự nhiên, ép bơ và nghiền mịn"
+      }
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "name": "The Sweet Lab Signature",
+    "slug": "the-sweet-lab",
+    "logoUrl": "/brands/the-sweet-lab.jpg",
+    "description": "Thương hiệu bánh kẹo healthy và dinh dưỡng thủ công độc quyền của The Sweet Lab. Tiên phong ứng dụng công nghệ làm ngọt tự nhiên không đường tinh luyện, bổ sung siêu thực phẩm (superfoods).",
+    "originCountry": "Việt Nam",
+    "websiteUrl": "https://thesweetlab.vn",
+    "displayOrder": 1,
+    "isActive": true
+  },
+  {
+    "name": "Cacaovita",
+    "slug": "cacaovita",
+    "logoUrl": "/brands/cacaovita.jpg",
+    "description": "Thương hiệu socola thủ công Bean-to-bar nguyên chất từ hạt cacao Bến Tre tuyển chọn. Cam kết socola đen từ 70% đến 100%, không pha trộn chất béo công nghiệp, dồi dào chất chống oxy hóa Polyphenol.",
+    "originCountry": "Việt Nam",
+    "websiteUrl": "https://cacaovita.vn",
+    "displayOrder": 2,
+    "isActive": true
+  },
+  {
+    "name": "NutriBloom",
+    "slug": "nutribloom",
+    "logoUrl": "/brands/nutribloom.jpg",
+    "description": "Chuyên các dòng bánh quy ngũ cốc dinh dưỡng, bánh ngói hạnh nhân Tuiles, Biscotti nguyên cám và thanh hạt Granola dinh dưỡng. Giàu chất xơ thực vật, tốt cho hệ tiêu hóa và hỗ trợ kiểm soát cân nặng.",
+    "originCountry": "Việt Nam",
+    "websiteUrl": "https://nutribloom.vn",
+    "displayOrder": 3,
+    "isActive": true
+  },
+  {
+    "name": "BerryZen",
+    "slug": "berryzen",
+    "logoUrl": "/brands/berryzen.jpg",
+    "description": "Dòng kẹo dẻo hữu cơ thuần chay (Vegan Gummies) chiết xuất từ nước ép quả mọng nguyên chất (dâu tây, việt quất, mâm xôi). 100% không chứa gelatin động vật, sử dụng pectin táo tự nhiên và tăng cường vitamin C.",
+    "originCountry": "Việt Nam",
+    "websiteUrl": "https://berryzen.vn",
+    "displayOrder": 4,
+    "isActive": true
+  },
+  {
+    "name": "KetoFlora",
+    "slug": "ketoflora",
+    "logoUrl": "/brands/ketoflora.jpg",
+    "description": "Thương hiệu tiên phong các sản phẩm bánh nướng Eat Clean & Keto Low-carb. 100% không bột mì (Gluten-Free), sử dụng bột hạnh nhân cao cấp kết hợp vị ngọt thanh từ quả La Hán Quả (Monk Fruit) an toàn cho người tiểu đường.",
+    "originCountry": "Việt Nam",
+    "websiteUrl": "https://ketoflora.vn",
+    "displayOrder": 5,
+    "isActive": true
+  },
+  {
+    "name": "PureChoc Artisans",
+    "slug": "purechoc-artisans",
+    "logoUrl": "/brands/purechoc-artisans.jpg",
+    "description": "Dòng socola tươi Nama thuần chay (Plant-based Nama Chocolate) độc đáo kết hợp nước cốt dừa hữu cơ và bơ hạt phỉ. Kết cấu mịn tan trong khoang miệng, vị ngọt dịu thanh nhẹ từ mật hoa dừa tự nhiên.",
+    "originCountry": "Việt Nam",
+    "websiteUrl": "https://purechocartisans.vn",
+    "displayOrder": 6,
+    "isActive": true
+  },
+  {
+    "name": "Sweetie Present",
+    "slug": "sweetie-present",
+    "logoUrl": "/brands/sweetie-present.jpg",
+    "description": "Thương hiệu hộp quà, giỏ quà và phụ kiện quà tặng độc quyền của The Sweet Lab. Cung cấp các mẫu hộp quà giấy kraft sinh học, giỏ mây tre đan cao cấp, ruy băng lụa và thiệp chúc mừng thiết kế riêng để kết hợp bánh kẹo healthy làm quà biếu tinh tế.",
+    "originCountry": "Việt Nam",
+    "websiteUrl": "https://thesweetlab.vn/gifts",
+    "displayOrder": 7,
+    "isActive": true
+  },
+  {
+    "name": "AuraBake Clean Treats",
+    "slug": "aurabake",
+    "logoUrl": "/brands/aurabake.jpg",
+    "description": "Bánh nướng ngũ cốc nguyên hạt thủ công dành riêng cho tín đồ thể thao, tập gym và lối sống năng động. Tỷ lệ đạm thực vật cao, hoàn toàn không chất bảo quản, chỉ nướng mới mỗi ngày với bơ đậu phộng và mật ong rừng.",
+    "originCountry": "Việt Nam",
+    "websiteUrl": "https://aurabake.vn",
+    "displayOrder": 8,
+    "isActive": true
+  }
+]

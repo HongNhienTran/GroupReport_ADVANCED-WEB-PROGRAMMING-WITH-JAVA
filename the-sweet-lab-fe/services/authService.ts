@@ -148,10 +148,48 @@ export const authService = {
             return data.message || "Đăng ký tài khoản thành công! Vui lòng kiểm tra email kích hoạt.";
         } catch (error: any) {
             if (error.message?.includes("fetch failed") || error.message?.includes("NetworkError") || error.message?.includes("Failed to fetch")) {
-                return "Đăng ký thành công (Demo offline). Khi Backend bật, email xác thực sẽ được gửi qua Mailpit!";
+                return "Đăng ký thành công (Demo offline). Khi Backend bật, email xác thực sẽ được gửi đến hòm thư của bạn!";
             }
             throw error;
         }
+    },
+
+    // 4. Kích hoạt tài khoản bằng Token từ Email
+    verifyEmail: async (token: string): Promise<string> => {
+        const res = await fetch(`${API_BASE_URL}/api/v1/auth/verify-email`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ token }),
+        });
+
+        const data: ApiResponse<string> = await res.json();
+
+        if (!res.ok || (data.code !== 1000 && !data.success)) {
+            throw new Error(data.message || "Xác thực tài khoản thất bại hoặc token không hợp lệ.");
+        }
+
+        return data.message || "Xác thực tài khoản thành công! Bạn có thể đăng nhập ngay bây giờ.";
+    },
+
+    // 5. Gửi lại mã kích hoạt
+    resendVerification: async (email: string): Promise<string> => {
+        const res = await fetch(`${API_BASE_URL}/api/v1/auth/resend-verification`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ email }),
+        });
+
+        const data: ApiResponse<string> = await res.json();
+
+        if (!res.ok || (data.code !== 1000 && !data.success)) {
+            throw new Error(data.message || "Gửi lại email kích hoạt thất bại.");
+        }
+
+        return data.message || "Đã gửi lại email kích hoạt! Vui lòng kiểm tra hòm thư của bạn.";
     },
 
     // 4. Quản lý phiên trong localStorage

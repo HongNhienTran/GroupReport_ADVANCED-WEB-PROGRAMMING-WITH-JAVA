@@ -31,6 +31,7 @@ public class ProductResponse {
     private String categoryName;
     private String categorySlug;
     private String brand;
+    private BrandResponse brandDetail;
     private String origin;
     private Integer cocoaPercentage;
     private Set<DietaryTag> dietaryTags;
@@ -41,4 +42,6 @@ public class ProductResponse {
     private ProductNutritionResponse nutrition;
     @Builder.Default
     private List<String> images = new ArrayList<>();
+    @Builder.Default
+    private List<ProductVariantResponse> variants = new ArrayList<>();
 }

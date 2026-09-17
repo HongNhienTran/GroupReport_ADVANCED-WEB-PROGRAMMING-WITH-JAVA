@@ -19,7 +19,7 @@ import java.util.UUID;
         @Index(name = "idx_product_sku", columnList = "sku", unique = true),
         @Index(name = "idx_product_category", columnList = "category_id"),
         @Index(name = "idx_product_price", columnList = "price"),
-        @Index(name = "idx_product_brand", columnList = "brand")
+        @Index(name = "idx_product_brand", columnList = "brand_id")
 })
 @Getter
 @Setter
@@ -61,8 +61,12 @@ public class Product extends BaseEntity {
     @JoinColumn(name = "category_id", nullable = false)
     private Category category;
 
-    @Column(name = "brand", length = 100)
-    private String brand;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "brand_id")
+    private Brand brand;
+
+    @Column(name = "brand_name", length = 100)
+    private String brandName;
 
     @Column(name = "origin", length = 100)
     private String origin;
@@ -100,4 +104,15 @@ public class Product extends BaseEntity {
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
     @Builder.Default
     private List<ProductImage> images = new ArrayList<>();
+
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
+    @Builder.Default
+    private List<ProductVariant> variants = new ArrayList<>();
+
+    public String getDisplayBrandName() {
+        if (brand != null && brand.getName() != null) {
+            return brand.getName();
+        }
+        return brandName;
+    }
 }

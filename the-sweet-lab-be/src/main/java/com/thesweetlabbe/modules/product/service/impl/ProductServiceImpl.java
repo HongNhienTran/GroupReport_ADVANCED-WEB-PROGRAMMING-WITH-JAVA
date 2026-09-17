@@ -25,6 +25,14 @@ public class ProductServiceImpl implements ProductService {
     private final ProductRepository productRepository;
 
     @Override
+    public List<ProductResponse> getAllProducts() {
+        return productRepository.findAll()
+                .stream()
+                .map(this::mapToResponse)
+                .toList();
+    }
+
+    @Override
     public List<ProductResponse> getFeaturedProducts() {
         return productRepository.findByIsFeaturedTrueAndStatus(ProductStatus.ACTIVE)
                 .stream()
@@ -77,6 +85,36 @@ public class ProductServiceImpl implements ProductService {
                 .map(ProductImage::getImageUrl)
                 .toList();
 
+        // Map Brand
+        com.thesweetlabbe.modules.product.dto.BrandResponse brandResponse = null;
+        if (product.getBrand() != null) {
+            com.thesweetlabbe.modules.product.entity.Brand b = product.getBrand();
+            brandResponse = com.thesweetlabbe.modules.product.dto.BrandResponse.builder()
+                    .id(b.getId())
+                    .name(b.getName())
+                    .slug(b.getSlug())
+                    .logoUrl(b.getLogoUrl())
+                    .description(b.getDescription())
+                    .originCountry(b.getOriginCountry())
+                    .websiteUrl(b.getWebsiteUrl())
+                    .build();
+        }
+
+        // Map Variants
+        List<com.thesweetlabbe.modules.product.dto.ProductVariantResponse> variantResponses = product.getVariants().stream()
+                .map(v -> com.thesweetlabbe.modules.product.dto.ProductVariantResponse.builder()
+                        .id(v.getId())
+                        .name(v.getName())
+                        .sku(v.getSku())
+                        .price(v.getPrice())
+                        .originalPrice(v.getOriginalPrice())
+                        .stockQuantity(v.getStockQuantity())
+                        .imageUrl(v.getImageUrl())
+                        .displayOrder(v.getDisplayOrder())
+                        .inStock(v.getStockQuantity() != null && v.getStockQuantity() > 0)
+                        .build())
+                .toList();
+
         return ProductResponse.builder()
                 .id(product.getId())
                 .name(product.getName())
@@ -90,7 +128,8 @@ public class ProductServiceImpl implements ProductService {
                 .categoryId(product.getCategory() != null ? product.getCategory().getId() : null)
                 .categoryName(product.getCategory() != null ? product.getCategory().getName() : null)
                 .categorySlug(product.getCategory() != null ? product.getCategory().getSlug() : null)
-                .brand(product.getBrand())
+                .brand(product.getDisplayBrandName())
+                .brandDetail(brandResponse)
                 .origin(product.getOrigin())
                 .cocoaPercentage(product.getCocoaPercentage())
                 .dietaryTags(product.getDietaryTags())
@@ -100,6 +139,7 @@ public class ProductServiceImpl implements ProductService {
                 .status(product.getStatus())
                 .nutrition(nutritionResponse)
                 .images(imageUrls)
+                .variants(variantResponses)
                 .build();
     }
 }
