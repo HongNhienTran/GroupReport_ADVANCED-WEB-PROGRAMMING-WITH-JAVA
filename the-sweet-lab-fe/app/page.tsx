@@ -3,6 +3,7 @@ import HeroSection from '@/components/home/HeroSection';
 import CategoryGrid from '@/components/home/CategoryGrid';
 import FlashSale from '@/components/home/FlashSale';
 import ProductSuggestion from '@/components/home/ProductSuggestion';
+import BrandShowcase from '@/components/home/BrandShowcase';
 import PromoSection from '@/components/home/PromoSection';
 import { productService } from '@/services/productService';
 
@@ -26,7 +27,10 @@ export default async function HomePage() {
       {/* 4. Gợi Ý Cho Bạn (Đã được đóng gói gọn gàng vào Component riêng) */}
       <ProductSuggestion products={products} />
 
-      {/* 5. Khối Đăng ký cẩm nang */}
+      {/* 5. Hệ Sinh Thái Thương Hiệu (4x2 Gallery Grid giống phong cách Maison Marou) */}
+      <BrandShowcase />
+
+      {/* 6. Khối Đăng ký cẩm nang */}
       <PromoSection />
 
     </div>
