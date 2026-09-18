@@ -91,16 +91,20 @@ export default function SweetieMascot() {
       )}
 
       {/* 2. Mascot Sweetie ghim cố định góc phải */}
-      <div className="relative group flex items-end">
-        {/* Nút nhỏ nhắc nhở khi đóng bong bóng chat */}
+      <div className="relative group flex flex-col items-center">
+        {/* Nút nhỏ nhắc nhở khi thu nhỏ hộp thoại: Nằm ngay trên đầu bé mascot */}
         {!isBubbleOpen && (
-          <button
-            onClick={() => setIsBubbleOpen(true)}
-            className="mr-2 mb-6 px-3 py-1.5 bg-white/95 backdrop-blur-md border border-emerald-200 shadow-lg rounded-full text-xs font-semibold text-emerald-800 hover:bg-emerald-50 transition-colors flex items-center gap-1.5 cursor-pointer"
-          >
-            <MessageCircle className="w-3.5 h-3.5 text-emerald-600" />
-            <span>Chat với Sweetie</span>
-          </button>
+          <div className="mb-1.5 flex flex-col items-center animate-in fade-in slide-in-from-bottom-2 duration-200">
+            <button
+              onClick={() => setIsBubbleOpen(true)}
+              className="px-3.5 py-1.5 bg-white/95 backdrop-blur-md border border-emerald-300 shadow-md shadow-emerald-950/10 rounded-full text-xs font-semibold text-emerald-800 hover:bg-emerald-50 hover:border-emerald-400 transition-all flex items-center gap-1.5 cursor-pointer hover:scale-105 whitespace-nowrap"
+            >
+              <MessageCircle className="w-3.5 h-3.5 text-emerald-600" />
+              <span>Chat với Sweetie</span>
+            </button>
+            {/* Mũi tên nhỏ trỏ xuống đầu bé */}
+            <div className="w-2 h-2 bg-white border-r border-b border-emerald-300 rotate-45 -mt-1 shadow-2xs" />
+          </div>
         )}
 
         {/* Hình ảnh Mascot Sweetie */}

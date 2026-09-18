@@ -78,11 +78,8 @@ export default function Footer() {
                             Liên Hệ
                         </h4>
                         <ul className="space-y-2 text-xs font-medium text-slate-600">
-                            <li>
-                                Hotline: <span className="font-bold text-slate-900">1900 6868</span>
-                            </li>
                             <li className="break-all">
-                                Email: <a href="mailto:contact@thesweetlab.com" className="hover:text-emerald-700 transition-colors font-medium">contact@thesweetlab.com</a>
+                                Email: <a href="mailto:contact@thesweetlab.com" className="hover:text-emerald-700 transition-colors font-medium">thesweetlab.contact@gmail.com</a>
                             </li>
                             <li>
                                 Giờ hoạt động: 08:00 - 21:30 hàng ngày
@@ -95,8 +92,8 @@ export default function Footer() {
                 {/* Đường gạch ngang phân cách & Logo chuẩn The Sweet Lab. */}
                 <div className="border-t border-emerald-100/60 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
                     {/* Logo thương hiệu viết chuẩn như Header */}
-                    <Link href="/" className="text-xl sm:text-2xl font-black tracking-tight text-slate-950 hover:opacity-95 transition-opacity">
-                        The Sweet <span className="text-emerald-600">Lab.</span>
+                    <Link href="/" className="text-xl sm:text-2xl font-extrabold tracking-tight text-slate-950 hover:opacity-95 transition-opacity">
+                        The Sweet <span className="text-emerald-700 font-extrabold">Lab.</span>
                     </Link>
 
                     {/* Dòng bản quyền */}

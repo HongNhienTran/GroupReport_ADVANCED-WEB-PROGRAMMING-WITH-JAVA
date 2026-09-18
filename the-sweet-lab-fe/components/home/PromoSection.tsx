@@ -14,8 +14,8 @@ export default function PromoSection() {
                         <div className="flex items-center gap-2 mb-1.5">
                         </div>
 
-                        {/* Tiêu đề chính phong cách NEW VIBES */}
-                        <h2 className="text-xl sm:text-2xl md:text-3xl font-black text-slate-900 tracking-tight leading-tight uppercase mb-1.5">
+                        {/* Tiêu đề chính */}
+                        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900 tracking-tight leading-tight mb-2">
                             Vị Ngọt Tự Nhiên, <span className="text-emerald-700">Lối Sống Lành Mạnh</span>
                         </h2>
 
@@ -28,29 +28,34 @@ export default function PromoSection() {
                         <div className="flex items-center gap-3">
                             <Link
                                 href="#categories"
-                                className="inline-flex items-center gap-1.5 bg-slate-900 hover:bg-emerald-800 text-white text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-lg transition-all duration-200 shadow-xs hover:scale-[1.02] active:scale-[0.98]"
+                                className="inline-flex items-center gap-1.5 bg-slate-900 hover:bg-emerald-800 text-white text-xs font-semibold px-4 py-2 rounded-lg transition-colors duration-200 shadow-xs"
                             >
                                 <span>Khám Phá Bộ Sưu Tập</span>
                                 <ArrowRight className="w-3.5 h-3.5" />
                             </Link>
                             <Link
                                 href="#flash-sale"
-                                className="inline-flex items-center gap-1.5 bg-white hover:bg-slate-100 text-slate-800 border border-slate-300 text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-lg transition-all duration-200"
+                                className="inline-flex items-center gap-1.5 bg-white hover:bg-slate-100 text-slate-800 border border-slate-300 text-xs font-semibold px-4 py-2 rounded-lg transition-colors duration-200"
                             >
                                 <span>Ưu Đãi Đặc Biệt</span>
                             </Link>
                         </div>
                     </div>
 
-                    {/* Cột phải: Ảnh ngang compact, chiều cao thấp gọn */}
-                    <div className="hidden md:block md:col-span-5 lg:col-span-4 h-32 md:h-40 rounded-xl relative overflow-hidden bg-slate-200 border border-slate-200/80 shadow-xs group">
-                        <img
-                            src="https://images.unsplash.com/photo-1549007994-cb92caebd54b?q=80&w=800&auto=format&fit=crop"
-                            alt="The Sweet Lab Healthy Sweets Collection"
-                            className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/15 via-transparent to-transparent pointer-events-none" />
+                    {/* Cột phải: Logo thương hiệu The Sweet Lab thay thế cho ảnh */}
+                    <div className="hidden md:flex md:col-span-5 lg:col-span-4 h-32 md:h-40 rounded-2xl bg-white border border-emerald-100 shadow-xs flex-col items-center justify-center p-5 text-center relative overflow-hidden">
+                        {/* Họa tiết trang trí nền nhẹ nhàng */}
+                        <div className="absolute -top-6 -right-6 w-24 h-24 bg-emerald-50 rounded-full blur-xl pointer-events-none" />
+                        <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-emerald-50 rounded-full blur-xl pointer-events-none" />
 
+                        <div className="relative z-10 flex flex-col items-center justify-center">
+                            <span className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-950">
+                                The Sweet <span className="text-emerald-700 font-extrabold">Lab.</span>
+                            </span>
+                            <span className="text-xs font-semibold tracking-wider text-slate-600 mt-2 uppercase">
+                                Healthy Sweets & Chocolates
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -113,7 +118,7 @@ export default function PromoSection() {
                                 THANH TOÁN AN TOÀN
                             </h4>
                             <p className="text-[10px] text-slate-500 font-medium">
-                                Bảo mật 100% VNPay / MoMo
+                                Bảo mật 100% MoMo
                             </p>
                         </div>
                     </div>

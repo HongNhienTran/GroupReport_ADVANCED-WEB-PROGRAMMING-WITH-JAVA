@@ -17,22 +17,22 @@ interface CategoryMeta {
 
 const CATEGORY_META: Record<string, CategoryMeta> = {
     'socola-cacao-thu-cong': {
-        image: 'https://images.unsplash.com/photo-1511381939415-e44015466834?q=80&w=800',
+        image: '/categories/Socola.png',
         tagline: 'Socola Đen & Nama Thủ Công',
         highlights: ['Bean-to-bar 70% - 100%', 'Nama cốt dừa thuần chay', 'Chống oxy hóa Polyphenol']
     },
     'banh-quy-banh-nuong-organic': {
-        image: 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?q=80&w=800',
+        image: '/categories/Bakery.png',
         tagline: 'Ngũ Cốc Nguyên Cám & Eat Clean',
         highlights: ['Biscotti không đường', 'Bánh ngói hạnh nhân Keto', 'Giàu chất xơ & protein']
     },
     'keo-deo-keo-thao-moc-tu-nhien': {
-        image: 'https://images.unsplash.com/photo-1582058091505-f87a2e55a40f?q=80&w=800',
+        image: '/categories/Candies.png',
         tagline: 'Pectin Quả Mọng Thuần Chay',
         highlights: ['100% Pectin táo tự nhiên', 'Không gelatin động vật', 'Bổ sung Vitamin C hữu cơ']
     },
     'hop-qua-combo-suc-khoe': {
-        image: 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=800',
+        image: '/categories/Gifts.png',
         tagline: 'Quà Tặng Tinh Tế & Thân Thiện',
         highlights: ['Hộp Kraft & giỏ mây tre đan', 'Bánh kẹo dinh dưỡng tuyển chọn', 'Gắn kết yêu thương']
     }
@@ -46,7 +46,7 @@ const DEFAULT_CATEGORIES: Category[] = [
         slug: 'socola-cacao-thu-cong',
         productCount: 4,
         description: 'Dòng socola đen bean-to-bar nguyên chất, nama tươi mềm tan và bột cacao nguyên chất giàu chất chống oxy hóa tự nhiên.',
-        imageUrl: 'https://images.unsplash.com/photo-1511381939415-e44015466834?q=80&w=800'
+        imageUrl: '/categories/Socola.png'
     },
     {
         id: 'cat-2',
@@ -54,7 +54,7 @@ const DEFAULT_CATEGORIES: Category[] = [
         slug: 'banh-quy-banh-nuong-organic',
         productCount: 4,
         description: 'Bánh nướng ngũ cốc nguyên cám, bánh ngói hạnh nhân Keto và Biscotti giòn tan không đường, giàu chất xơ và đạm thực vật sạch.',
-        imageUrl: 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?q=80&w=800'
+        imageUrl: '/categories/Bakery.png'
     },
     {
         id: 'cat-3',
@@ -62,7 +62,7 @@ const DEFAULT_CATEGORIES: Category[] = [
         slug: 'keo-deo-keo-thao-moc-tu-nhien',
         productCount: 4,
         description: 'Kẹo dẻo hoa quả thuần chay từ pectin táo tự nhiên, 100% nước ép quả mọng và kẹo ngậm thảo dược thông họng không đường.',
-        imageUrl: 'https://images.unsplash.com/photo-1582058091505-f87a2e55a40f?q=80&w=800'
+        imageUrl: '/categories/Candies.png'
     },
     {
         id: 'cat-4',
@@ -70,7 +70,7 @@ const DEFAULT_CATEGORIES: Category[] = [
         slug: 'hop-qua-combo-suc-khoe',
         productCount: 4,
         description: 'Set quà biếu sức khỏe tinh tế với giỏ mây tre đan thủ công, hộp giấy kraft eco-friendly và các dòng bánh kẹo healthy trao gửi tình thân.',
-        imageUrl: 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=800'
+        imageUrl: '/categories/Gifts.png'
     }
 ];
 
@@ -118,12 +118,12 @@ export default function CategoryGrid({ categories }: CategoryGridProps) {
                             onMouseEnter={() => setHoveredId(String(cat.id || idx))}
                             onMouseLeave={() => setHoveredId(null)}
                         >
-                            {/* Ảnh nền Ngành Hàng (Zoom mượt mà khi hover) */}
+                            {/* Ảnh nền Ngành Hàng (Cố định không zoom khi hover) */}
                             <div className="absolute inset-0 w-full h-full overflow-hidden">
                                 <img
                                     src={bgImage}
                                     alt={cat.name}
-                                    className="w-full h-full object-cover object-center transform transition-transform duration-700 ease-out group-hover:scale-110"
+                                    className="w-full h-full object-cover object-center pointer-events-none"
                                     loading="lazy"
                                 />
                             </div>

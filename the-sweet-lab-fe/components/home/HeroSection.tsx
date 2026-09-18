@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { Search, Sparkles, SlidersHorizontal, ArrowRight, Tag } from 'lucide-react';
+import { Search, ArrowRight, Tag } from 'lucide-react';
 
 const POPULAR_TAGS = [
     { label: 'Socola đen 85%', query: 'Socola Đen' },
@@ -37,25 +37,25 @@ export default function HeroSection() {
 
     return (
         <section className="max-w-7xl mx-auto px-4 sm:px-6 pt-10 md:pt-14 pb-10 md:pb-16 mb-4 md:mb-8 relative overflow-hidden">
-            {/* SVG Background Curve */}
-            <div className="absolute inset-y-0 right-0 w-full md:w-[55%] z-0 pointer-events-none hidden md:block">
+            {/* SVG Background Curve - Chỉ bao bọc phần Banner trên, không tràn xuống thanh tìm kiếm */}
+            <div className="absolute top-0 right-0 w-full md:w-[50%] lg:w-[46%] h-[420px] md:h-[470px] z-0 pointer-events-none hidden md:block overflow-hidden">
                 <svg
                     viewBox="0 0 500 500"
                     preserveAspectRatio="none"
-                    className="w-full h-full object-cover text-emerald-800/100 filter drop-shadow-[-10px_0_15px_rgba(0,0,0,0.03)]"
+                    className="w-full h-full text-emerald-800 filter drop-shadow-[-8px_0_12px_rgba(0,0,0,0.04)]"
                 >
                     <path
                         fill="currentColor"
-                        d="M150,0 C220,120 80,260 200,380 C260,440 320,470 500,500 L500,0 Z"
+                        d="M160,0 C230,110 90,220 180,330 C240,400 330,440 500,450 L500,0 Z"
                     />
                 </svg>
             </div>
-            <div className="absolute inset-x-0 top-0 h-[45%] bg-emerald-800 z-0 md:hidden rounded-b-[3rem]"></div>
+            <div className="absolute inset-x-0 top-0 h-[380px] bg-emerald-800 z-0 md:hidden rounded-b-[2.5rem]"></div>
 
             {/* 1. Phần Banner chính (Text bên trái, Ảnh đĩa bánh kẹo bên phải) */}
             <div className="md:flex items-center justify-between gap-12 relative z-10 min-h-[420px]">
                 <div className="max-w-xl space-y-5 z-10 md:text-left text-center">
-                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-slate-950 leading-[1.15]">
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-slate-900 leading-[1.18] tracking-tight">
                         Nuông Chiều <br />
                         <span className="text-emerald-600 md:text-emerald-600 text-emerald-400">Cơn Thèm Ngọt</span> <br />
                         Một Cách Lành Mạnh
@@ -66,7 +66,7 @@ export default function HeroSection() {
                     <div className="pt-2">
                         <Link
                             href="#categories"
-                            className="inline-block bg-emerald-600 hover:bg-emerald-700 md:bg-emerald-600 md:hover:bg-emerald-700 bg-white text-slate-900 md:text-white font-bold px-8 py-3 rounded-full transition-all shadow-md shadow-emerald-900/10 hover:shadow-xl hover:scale-[1.02] text-sm"
+                            className="inline-block bg-emerald-600 hover:bg-emerald-700 md:bg-emerald-600 md:hover:bg-emerald-700 bg-white text-slate-900 md:text-white font-bold px-8 py-3 rounded-full transition-colors shadow-sm hover:shadow-md text-sm"
                         >
                             Khám Phá Ngay
                         </Link>
@@ -74,8 +74,8 @@ export default function HeroSection() {
                 </div>
 
                 <div className="mt-10 md:mt-0 relative w-full md:w-[480px] h-[360px] md:h-[420px] flex items-center justify-center z-10">
-                    <div className="w-[300px] sm:w-[360px] h-[300px] sm:h-[360px] bg-white rounded-full border-4 border-white/40 flex items-center justify-center group cursor-pointer shadow-lg">
-                        <div className="relative w-[340px] sm:w-[420px] h-[260px] sm:h-[300px] flex-shrink-0 flex items-center justify-center group-hover:scale-[1.04] transition-transform duration-500 select-none">
+                    <div className="w-[300px] sm:w-[360px] h-[300px] sm:h-[360px] bg-white rounded-full border-4 border-white/40 flex items-center justify-center group cursor-pointer shadow-md">
+                        <div className="relative w-[340px] sm:w-[420px] h-[260px] sm:h-[300px] flex-shrink-0 flex items-center justify-center select-none">
                             <img
                                 src="/Hero_Img.png"
                                 alt="Fruits Platter"
@@ -112,8 +112,7 @@ export default function HeroSection() {
                         <div className="hidden md:block h-8 w-[1px] bg-slate-200" />
 
                         {/* Dropdown chọn danh mục nhanh */}
-                        <div className="flex items-center gap-2 w-full md:w-auto px-3 py-1 border-t md:border-t-0 border-slate-100">
-                            <Sparkles className="w-4 h-4 text-emerald-600 hidden sm:block flex-shrink-0" />
+                        <div className="flex items-center w-full md:w-auto px-3 py-1 border-t md:border-t-0 border-slate-100">
                             <select
                                 value={category}
                                 onChange={(e) => setCategory(e.target.value)}
@@ -130,7 +129,7 @@ export default function HeroSection() {
                         {/* Nút bấm Tìm Kiếm màu xanh Emerald nổi bật */}
                         <button
                             type="submit"
-                            className="w-full md:w-auto bg-emerald-700 hover:bg-emerald-800 text-white font-bold px-7 sm:px-9 py-3 rounded-xl md:rounded-full flex items-center justify-center gap-2 transition-all shadow-md shadow-emerald-900/15 hover:shadow-lg active:scale-95 text-xs sm:text-sm whitespace-nowrap cursor-pointer"
+                            className="w-full md:w-auto bg-emerald-700 hover:bg-emerald-800 text-white font-bold px-7 sm:px-9 py-3 rounded-xl md:rounded-full flex items-center justify-center gap-2 transition-colors shadow-sm hover:shadow-md text-xs sm:text-sm whitespace-nowrap cursor-pointer"
                         >
                             <span>Tìm Kiếm</span>
                             <ArrowRight className="w-4 h-4" />
@@ -150,7 +149,7 @@ export default function HeroSection() {
                             key={idx}
                             type="button"
                             onClick={() => handleTagClick(tag.query)}
-                            className="bg-white hover:bg-emerald-50 text-slate-600 hover:text-emerald-700 px-3 py-1 rounded-full border border-slate-200/80 transition-all hover:border-emerald-300 cursor-pointer shadow-2xs hover:scale-105 text-[11px] sm:text-xs"
+                            className="bg-white hover:bg-emerald-50 text-slate-600 hover:text-emerald-700 px-3 py-1 rounded-full border border-slate-200/80 transition-colors hover:border-emerald-300 cursor-pointer shadow-2xs text-[11px] sm:text-xs"
                         >
                             #{tag.label}
                         </button>

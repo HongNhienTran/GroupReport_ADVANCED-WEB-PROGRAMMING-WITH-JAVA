@@ -3,8 +3,8 @@
     "name": "Kẹo Dẻo & Kẹo Thảo Mộc Tự Nhiên",
     "slug": "keo-deo-keo-thao-moc-tu-nhien",
     "description": "Kẹo dẻo vegan từ pectin hoa quả và kẹo ngậm thảo dược thiên nhiên không đường hóa học",
-    "imageUrl": "https://images.unsplash.com/photo-1582058091505-f87a2e55a40f?q=80&w=800",
-    "bannerUrl": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?q=80&w=1200",
+    "imageUrl": "/categories/Candies.png",
+    "bannerUrl": "/categories/Candies.png",
     "displayOrder": 3
   },
   "products": [

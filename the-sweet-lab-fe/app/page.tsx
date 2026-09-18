@@ -1,6 +1,5 @@
 import React from 'react';
 import HeroSection from '@/components/home/HeroSection';
-import CategoryGrid from '@/components/home/CategoryGrid';
 import FlashSale from '@/components/home/FlashSale';
 import ProductSuggestion from '@/components/home/ProductSuggestion';
 import BrandShowcase from '@/components/home/BrandShowcase';
@@ -21,13 +20,10 @@ export default async function HomePage() {
       {/* 2. Flash Sale Đếm Ngược */}
       <FlashSale flashSales={flashSales} />
 
-      {/* 3. 4 Ngành Hàng Dinh Dưỡng (4 Khung ảnh tương tác phía trên danh sách sản phẩm gợi ý) */}
-      <CategoryGrid categories={categories} />
+      {/* 3. Gợi Ý Cho Bạn (Tích hợp 4 khung ảnh ngành hàng thu nhỏ thay cho phân loại) */}
+      <ProductSuggestion products={products} categories={categories} />
 
-      {/* 4. Gợi Ý Cho Bạn (Danh sách sản phẩm gợi ý) */}
-      <ProductSuggestion products={products} />
-
-      {/* 5. Hệ Sinh Thái Thương Hiệu (4x2 Gallery Grid giống phong cách Maison Marou) */}
+      {/* 4. Hệ Sinh Thái Thương Hiệu (4x2 Gallery Grid giống phong cách Maison Marou) */}
       <BrandShowcase />
 
       {/* 6. Khối Đăng ký cẩm nang */}

@@ -3,8 +3,8 @@
     "name": "Bánh Quy & Bánh Nướng Organic",
     "slug": "banh-quy-banh-nuong-organic",
     "description": "Bánh nướng ngũ cốc nguyên cám, ít ngọt, không chất béo xấu, cung cấp năng lượng sạch dồi dào",
-    "imageUrl": "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?q=80&w=800",
-    "bannerUrl": "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?q=80&w=1200",
+    "imageUrl": "/categories/Bakery.png",
+    "bannerUrl": "/categories/Bakery.png",
     "displayOrder": 2
   },
   "products": [

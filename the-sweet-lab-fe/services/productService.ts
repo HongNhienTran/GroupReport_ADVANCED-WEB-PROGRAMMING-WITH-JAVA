@@ -61,6 +61,8 @@ const mockFlashSales: FlashSaleProduct[] = [
     { id: 'fs-2', name: 'Bánh Cookies Yến Mạch Socola Chip AuraBake Clean Treats', price: 110000, oldPrice: 125000, imageUrl: 'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?q=80&w=800' },
     { id: 'fs-3', name: 'Kẹo Dẻo Thuần Chay BerryZen Vị Dâu & Quả Mọng Pectin Hữu Cơ', price: 65000, oldPrice: 75000, imageUrl: 'https://images.unsplash.com/photo-1582058091505-f87a2e55a40f?q=80&w=800' },
     { id: 'fs-4', name: 'Hộp Quà Sweetie Present Eco-Friendly Tinh Hoa Bánh Kẹo Healthy', price: 420000, oldPrice: 480000, imageUrl: 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=800' },
+    { id: 'fs-5', name: 'Socola Đen Cacaovita 85% Nguyên Chất Đắk Lắk', price: 120000, oldPrice: 145000, imageUrl: 'https://images.unsplash.com/photo-1548907040-4baa42d10919?q=80&w=800' },
+    { id: 'fs-6', name: 'Bánh Ngói Hạnh Nhân Tuiles KetoFlora Bột Hạnh Nhân Siêu Mỏng', price: 115000, oldPrice: 135000, imageUrl: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=800' },
 ];
 
 const mockFeaturedProducts: Product[] = [
@@ -206,17 +208,33 @@ export const productService = {
             const data = extractDataArray(result);
             
             if (data && data.length > 0) {
-                return data.map((cat: any, index: number) => ({
-                    id: cat.id,
-                    name: cat.name,
-                    slug: cat.slug,
-                    productCount: cat.productCount || 0,
-                    backgroundColor: categoryBackgrounds[index % categoryBackgrounds.length],
-                    imageUrl: cat.imageUrl || `/categories/Socola.png`,
-                    description: cat.description || `Khám phá các dòng sản phẩm ${cat.name} lành mạnh, an toàn cho sức khỏe.`,
-                    bannerUrl: cat.bannerUrl || cat.imageUrl || `/categories/Socola.png`,
-                    children: cat.children || []
-                }));
+                return data.map((cat: any, index: number) => {
+                    const slug = (cat.slug || '').toLowerCase();
+                    const name = (cat.name || '').toLowerCase();
+                    let categoryImage = '/categories/Socola.png';
+
+                    if (slug.includes('banh') || name.includes('bánh')) {
+                        categoryImage = '/categories/Bakery.png';
+                    } else if (slug.includes('keo') || name.includes('kẹo')) {
+                        categoryImage = '/categories/Candies.png';
+                    } else if (slug.includes('hop') || slug.includes('qua') || name.includes('quà') || name.includes('combo')) {
+                        categoryImage = '/categories/Gifts.png';
+                    } else if (slug.includes('socola') || name.includes('socola') || name.includes('cacao')) {
+                        categoryImage = '/categories/Socola.png';
+                    }
+
+                    return {
+                        id: cat.id,
+                        name: cat.name,
+                        slug: cat.slug,
+                        productCount: cat.productCount || 0,
+                        backgroundColor: categoryBackgrounds[index % categoryBackgrounds.length],
+                        imageUrl: categoryImage,
+                        description: cat.description || `Khám phá các dòng sản phẩm ${cat.name} lành mạnh, an toàn cho sức khỏe.`,
+                        bannerUrl: categoryImage,
+                        children: cat.children || []
+                    };
+                });
             }
         } catch (error) {
             console.warn('[productService] Không thể kết nối Backend API categories, sử dụng mock data:', (error as any).message);

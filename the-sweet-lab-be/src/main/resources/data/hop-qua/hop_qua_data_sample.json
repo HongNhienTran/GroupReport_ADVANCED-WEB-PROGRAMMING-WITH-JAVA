@@ -3,8 +3,8 @@
     "name": "Hộp Quà & Combo Sức Khỏe",
     "slug": "hop-qua-combo-suc-khoe",
     "description": "Bộ quà tặng sức khỏe tinh tế, ý nghĩa cho người thân và đối tác",
-    "imageUrl": "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=800",
-    "bannerUrl": "https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=1200",
+    "imageUrl": "/categories/Gifts.png",
+    "bannerUrl": "/categories/Gifts.png",
     "displayOrder": 4
   },
   "products": [

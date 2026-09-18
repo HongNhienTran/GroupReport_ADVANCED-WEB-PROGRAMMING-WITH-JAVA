@@ -62,13 +62,13 @@ export default function Navbar() {
   return (
     <>
       <div className="bg-emerald-50 text-center py-2 text-xs font-semibold text-emerald-700 border-b border-emerald-100">
-        🌱 100% Organic & Sugar-Free • Ăn vặt dinh dưỡng lành mạnh
+        100% Organic & Sugar-Free • Ăn vặt dinh dưỡng lành mạnh
       </div>
 
       <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <Link href="/" className="text-2xl font-black tracking-tight text-slate-950">
-            The Sweet <span className="text-emerald-600">Lab.</span>
+          <Link href="/" className="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-950">
+            The Sweet <span className="text-emerald-700 font-extrabold">Lab.</span>
           </Link>
 
           <nav className="hidden md:flex items-center gap-6 text-sm font-semibold text-gray-600">
@@ -95,15 +95,6 @@ export default function Navbar() {
           </nav>
 
           <div className="flex items-center gap-3 md:gap-4">
-            {/* Nút Tìm kiếm nhanh */}
-            <Link
-              href="/products"
-              title="Tìm kiếm sản phẩm"
-              className="p-2.5 hover:bg-slate-100 rounded-full text-slate-700 hover:text-emerald-700 transition-colors flex items-center justify-center cursor-pointer"
-            >
-              <Search className="w-4 h-4 text-slate-700 hover:text-emerald-600 transition-colors" />
-            </Link>
-
             {/* Sản phẩm yêu thích (Wishlist) */}
             <button
               title="Sản phẩm yêu thích"
