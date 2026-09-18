@@ -44,6 +44,7 @@ public class UserServiceImpl implements UserService {
                 .updatedAt(user.getUpdatedAt())
                 .profile(mapProfileToDTO(user.getProfile()))
                 .nutritionProfile(mapNutritionToDTO(user.getNutritionProfile()))
+                .addresses(mapAddressesToDTO(user.getAddresses()))
                 .build();
     }
 
@@ -52,7 +53,6 @@ public class UserServiceImpl implements UserService {
         if (profile == null) return null;
         return UserProfileDTO.builder()
                 .phone(profile.getPhone())
-                .address(profile.getAddress())
                 .avatar(profile.getAvatar())
                 .dateOfBirth(profile.getDateOfBirth())
                 .gender(profile.getGender())
@@ -69,5 +69,28 @@ public class UserServiceImpl implements UserService {
                 .goal(nutritionProfile.getGoal())
                 .dietaryPreference(nutritionProfile.getDietaryPreference())
                 .build();
+    }
+
+    @Override
+    public com.thesweetlabbe.modules.user.dto.UserAddressDTO mapAddressToDTO(com.thesweetlabbe.modules.user.entity.UserAddress address) {
+        if (address == null) return null;
+        return com.thesweetlabbe.modules.user.dto.UserAddressDTO.builder()
+                .id(address.getId())
+                .recipientName(address.getRecipientName())
+                .phone(address.getPhone())
+                .province(address.getProvince())
+                .district(address.getDistrict())
+                .ward(address.getWard())
+                .detailAddress(address.getDetailAddress())
+                .fullAddress(address.getFullAddress())
+                .addressType(address.getAddressType())
+                .isDefault(address.isDefault())
+                .build();
+    }
+
+    @Override
+    public java.util.List<com.thesweetlabbe.modules.user.dto.UserAddressDTO> mapAddressesToDTO(java.util.List<com.thesweetlabbe.modules.user.entity.UserAddress> addresses) {
+        if (addresses == null) return java.util.Collections.emptyList();
+        return addresses.stream().map(this::mapAddressToDTO).toList();
     }
 }

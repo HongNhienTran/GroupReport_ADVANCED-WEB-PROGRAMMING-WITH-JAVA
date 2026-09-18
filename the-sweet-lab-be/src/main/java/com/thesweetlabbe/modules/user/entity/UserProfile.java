@@ -24,9 +24,6 @@ public class UserProfile {
     @Column(name = "phone", length = 20)
     private String phone;
 
-    @Column(name = "address", length = 255)
-    private String address;
-
     @Column(name = "avatar", length = 500)
     private String avatar;
 

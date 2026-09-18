@@ -18,4 +18,8 @@ public interface UserService {
     UserProfileDTO mapProfileToDTO(UserProfile profile);
 
     NutritionProfileDTO mapNutritionToDTO(NutritionProfile nutritionProfile);
+
+    com.thesweetlabbe.modules.user.dto.UserAddressDTO mapAddressToDTO(com.thesweetlabbe.modules.user.entity.UserAddress address);
+
+    java.util.List<com.thesweetlabbe.modules.user.dto.UserAddressDTO> mapAddressesToDTO(java.util.List<com.thesweetlabbe.modules.user.entity.UserAddress> addresses);
 }

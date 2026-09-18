@@ -15,16 +15,16 @@ export default async function HomePage() {
   return (
     <div className="bg-white min-h-screen font-sans selection:bg-emerald-100">
 
-      {/* 1. Hero Welcome Banner */}
+      {/* 1. Hero Welcome Banner (Kèm thanh tìm kiếm lớn bên dưới) */}
       <HeroSection />
 
-      {/* 2. Danh Mục Nổi Bật */}
-      <CategoryGrid categories={categories} />
-
-      {/* 3. Flash Sale Đếm Ngược */}
+      {/* 2. Flash Sale Đếm Ngược */}
       <FlashSale flashSales={flashSales} />
 
-      {/* 4. Gợi Ý Cho Bạn (Đã được đóng gói gọn gàng vào Component riêng) */}
+      {/* 3. 4 Ngành Hàng Dinh Dưỡng (4 Khung ảnh tương tác phía trên danh sách sản phẩm gợi ý) */}
+      <CategoryGrid categories={categories} />
+
+      {/* 4. Gợi Ý Cho Bạn (Danh sách sản phẩm gợi ý) */}
       <ProductSuggestion products={products} />
 
       {/* 5. Hệ Sinh Thái Thương Hiệu (4x2 Gallery Grid giống phong cách Maison Marou) */}

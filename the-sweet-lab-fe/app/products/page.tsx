@@ -7,7 +7,13 @@ export const metadata = {
     description: 'Khám phá tất cả các dòng sản phẩm socola đen, bánh nướng ít đường, kẹo dẻo hữu cơ 100% tự nhiên tại The Sweet Lab.',
 };
 
-export default async function ProductsPage() {
+export default async function ProductsPage({
+    searchParams,
+}: {
+    searchParams?: Promise<{ search?: string; category?: string }>;
+}) {
+    const resolvedParams = searchParams ? await searchParams : {};
+
     // Kéo dữ liệu song song từ productService (có fallback mock data đầy đủ)
     const [categories, flashSales, products] = await Promise.all([
         productService.getFeaturedCategories(),
@@ -20,6 +26,8 @@ export default async function ProductsPage() {
             initialProducts={products}
             categories={categories}
             flashSales={flashSales}
+            initialSearch={resolvedParams.search || ''}
+            initialCategory={resolvedParams.category || 'all'}
         />
     );
 }

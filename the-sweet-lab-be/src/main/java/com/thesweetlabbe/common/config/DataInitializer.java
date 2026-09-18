@@ -50,7 +50,6 @@ public class DataInitializer implements CommandLineRunner {
         UserProfile adminProfile = UserProfile.builder()
                 .user(admin)
                 .phone("0901234567")
-                .address("123 Đường Công Nghệ, Quận 1, TP. Hồ Chí Minh")
                 .gender(Gender.OTHER)
                 .dateOfBirth(LocalDate.of(1995, 1, 1))
                 .build();
@@ -66,6 +65,20 @@ public class DataInitializer implements CommandLineRunner {
                 .build();
         admin.setNutritionProfile(adminNutrition);
 
+        com.thesweetlabbe.modules.user.entity.UserAddress adminAddress = com.thesweetlabbe.modules.user.entity.UserAddress.builder()
+                .user(admin)
+                .recipientName("Ban Quản Trị The Sweet Lab")
+                .phone("0901234567")
+                .province("TP. Hồ Chí Minh")
+                .district("Quận 1")
+                .ward("Phường Bến Nghé")
+                .detailAddress("123 Đường Công Nghệ")
+                .fullAddress("123 Đường Công Nghệ, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh")
+                .addressType(AddressType.OFFICE)
+                .isDefault(true)
+                .build();
+        admin.getAddresses().add(adminAddress);
+
         userRepository.save(admin);
 
         // 2. Customer 1 (Ăn kiêng Keto / Giảm cân)
@@ -80,7 +93,6 @@ public class DataInitializer implements CommandLineRunner {
         UserProfile customer1Profile = UserProfile.builder()
                 .user(customer1)
                 .phone("0912345678")
-                .address("45 Lê Lợi, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh")
                 .gender(Gender.MALE)
                 .dateOfBirth(LocalDate.of(1998, 5, 20))
                 .build();
@@ -96,6 +108,33 @@ public class DataInitializer implements CommandLineRunner {
                 .build();
         customer1.setNutritionProfile(customer1Nutrition);
 
+        com.thesweetlabbe.modules.user.entity.UserAddress customer1Home = com.thesweetlabbe.modules.user.entity.UserAddress.builder()
+                .user(customer1)
+                .recipientName("Nguyễn Văn An")
+                .phone("0912345678")
+                .province("TP. Hồ Chí Minh")
+                .district("Quận 1")
+                .ward("Phường Bến Nghé")
+                .detailAddress("45 Lê Lợi")
+                .fullAddress("45 Lê Lợi, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh")
+                .addressType(AddressType.HOME)
+                .isDefault(true)
+                .build();
+        com.thesweetlabbe.modules.user.entity.UserAddress customer1Office = com.thesweetlabbe.modules.user.entity.UserAddress.builder()
+                .user(customer1)
+                .recipientName("Nguyễn Văn An (Văn phòng)")
+                .phone("0912345678")
+                .province("TP. Hồ Chí Minh")
+                .district("Quận 1")
+                .ward("Phường Bến Nghé")
+                .detailAddress("Tầng 12, Tòa nhà Bitexco, 2 Hải Triều")
+                .fullAddress("Tầng 12, Tòa nhà Bitexco, 2 Hải Triều, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh")
+                .addressType(AddressType.OFFICE)
+                .isDefault(false)
+                .build();
+        customer1.getAddresses().add(customer1Home);
+        customer1.getAddresses().add(customer1Office);
+
         userRepository.save(customer1);
 
         // 3. Customer 2 (Thuần chay / Eat Clean)
@@ -110,7 +149,6 @@ public class DataInitializer implements CommandLineRunner {
         UserProfile customer2Profile = UserProfile.builder()
                 .user(customer2)
                 .phone("0987654321")
-                .address("88 Nguyễn Huệ, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh")
                 .gender(Gender.FEMALE)
                 .dateOfBirth(LocalDate.of(2000, 10, 15))
                 .build();
@@ -126,9 +164,23 @@ public class DataInitializer implements CommandLineRunner {
                 .build();
         customer2.setNutritionProfile(customer2Nutrition);
 
+        com.thesweetlabbe.modules.user.entity.UserAddress customer2Home = com.thesweetlabbe.modules.user.entity.UserAddress.builder()
+                .user(customer2)
+                .recipientName("Trần Thị Bình")
+                .phone("0987654321")
+                .province("TP. Hồ Chí Minh")
+                .district("Quận 1")
+                .ward("Phường Bến Nghé")
+                .detailAddress("88 Nguyễn Huệ")
+                .fullAddress("88 Nguyễn Huệ, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh")
+                .addressType(AddressType.HOME)
+                .isDefault(true)
+                .build();
+        customer2.getAddresses().add(customer2Home);
+
         userRepository.save(customer2);
 
-        log.info("Users seeded successfully (Admin: admin@thesweetlab.com, Customers: customer1@thesweetlab.com, customer2@thesweetlab.com).");
+        log.info("Users seeded successfully with address books (Admin, customer1 [2 addresses], customer2 [1 address]).");
     }
 
     private void seedJsonData() {

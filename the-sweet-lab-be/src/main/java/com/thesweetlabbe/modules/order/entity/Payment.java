@@ -1,6 +1,5 @@
 package com.thesweetlabbe.modules.order.entity;
 
-import com.thesweetlabbe.common.entity.BaseEntity;
 import com.thesweetlabbe.modules.order.enums.PaymentMethod;
 import com.thesweetlabbe.modules.order.enums.PaymentStatus;
 import jakarta.persistence.*;
@@ -20,7 +19,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Payment extends BaseEntity {
+public class Payment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)

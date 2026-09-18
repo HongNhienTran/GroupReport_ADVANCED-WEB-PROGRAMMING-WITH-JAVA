@@ -24,4 +24,5 @@ public class UserDTO {
     private Instant updatedAt;
     private UserProfileDTO profile;
     private NutritionProfileDTO nutritionProfile;
+    private java.util.List<UserAddressDTO> addresses;
 }

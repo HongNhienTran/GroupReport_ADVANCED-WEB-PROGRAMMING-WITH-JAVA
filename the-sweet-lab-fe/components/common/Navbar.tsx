@@ -95,17 +95,14 @@ export default function Navbar() {
           </nav>
 
           <div className="flex items-center gap-3 md:gap-4">
-            {/* Ô Tìm kiếm */}
-            <div className="relative hidden sm:block">
-              <input
-                type="text"
-                placeholder="Tìm bánh, kẹo..."
-                className="bg-gray-50 border border-gray-200 pl-4 pr-9 py-1.5 rounded-full text-xs focus:outline-none focus:ring-1 focus:ring-emerald-500 w-36 md:w-44 text-slate-800"
-              />
-              <div className="absolute right-3 top-0 bottom-0 flex items-center justify-center pointer-events-none">
-                <Search className="w-3.5 h-3.5 text-gray-400" />
-              </div>
-            </div>
+            {/* Nút Tìm kiếm nhanh */}
+            <Link
+              href="/products"
+              title="Tìm kiếm sản phẩm"
+              className="p-2.5 hover:bg-slate-100 rounded-full text-slate-700 hover:text-emerald-700 transition-colors flex items-center justify-center cursor-pointer"
+            >
+              <Search className="w-4 h-4 text-slate-700 hover:text-emerald-600 transition-colors" />
+            </Link>
 
             {/* Sản phẩm yêu thích (Wishlist) */}
             <button

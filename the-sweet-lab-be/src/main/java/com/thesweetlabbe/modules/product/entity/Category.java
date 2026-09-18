@@ -1,7 +1,6 @@
 package com.thesweetlabbe.modules.product.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.thesweetlabbe.common.entity.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -18,7 +17,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Category extends BaseEntity {
+public class Category {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)

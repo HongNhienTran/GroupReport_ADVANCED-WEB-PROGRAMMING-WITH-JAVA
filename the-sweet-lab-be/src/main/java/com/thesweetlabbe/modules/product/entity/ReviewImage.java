@@ -1,6 +1,5 @@
 package com.thesweetlabbe.modules.product.entity;
 
-import com.thesweetlabbe.common.entity.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -15,7 +14,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class ReviewImage extends BaseEntity {
+public class ReviewImage {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)

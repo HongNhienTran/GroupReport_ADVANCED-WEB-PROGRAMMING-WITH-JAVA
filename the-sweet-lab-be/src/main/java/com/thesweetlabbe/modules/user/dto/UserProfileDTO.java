@@ -14,7 +14,6 @@ import java.time.LocalDate;
 @AllArgsConstructor
 public class UserProfileDTO {
     private String phone;
-    private String address;
     private String avatar;
     private LocalDate dateOfBirth;
     private Gender gender;

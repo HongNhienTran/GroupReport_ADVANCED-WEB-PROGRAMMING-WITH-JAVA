@@ -1,6 +1,5 @@
 package com.thesweetlabbe.modules.order.entity;
 
-import com.thesweetlabbe.common.entity.BaseEntity;
 import com.thesweetlabbe.modules.product.entity.Product;
 import jakarta.persistence.*;
 import lombok.*;
@@ -18,7 +17,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class OrderDetail extends BaseEntity {
+public class OrderDetail {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
