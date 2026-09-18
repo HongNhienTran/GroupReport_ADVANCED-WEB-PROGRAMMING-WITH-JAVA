@@ -1,6 +1,5 @@
 package com.thesweetlabbe.modules.product.entity;
 
-import com.thesweetlabbe.common.entity.BaseEntity;
 import com.thesweetlabbe.modules.user.entity.User;
 import jakarta.persistence.*;
 import lombok.*;
@@ -19,7 +18,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class WishlistItem extends BaseEntity {
+public class WishlistItem {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)

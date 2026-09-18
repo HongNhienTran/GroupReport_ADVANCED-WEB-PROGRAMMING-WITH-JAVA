@@ -1,0 +1,220 @@
+{
+  "category": {
+    "name": "Kẹo Dẻo & Kẹo Thảo Mộc Tự Nhiên",
+    "slug": "keo-deo-keo-thao-moc-tu-nhien",
+    "description": "Kẹo dẻo vegan từ pectin hoa quả và kẹo ngậm thảo dược thiên nhiên không đường hóa học",
+    "imageUrl": "/categories/Candies.png",
+    "bannerUrl": "/categories/Candies.png",
+    "displayOrder": 3
+  },
+  "products": [
+    {
+      "name": "Kẹo Dẻo Thuần Chay BerryZen Vị Dâu & Quả Mọng Pectin Hữu Cơ",
+      "slug": "keo-deo-thuan-chay-berryzen-vi-dau-qua-mong",
+      "sku": "SWL-CAND-001",
+      "price": 65000,
+      "originalPrice": 75000,
+      "stockQuantity": 150,
+      "description": "Kẹo dẻo trái cây thuần chay cao cấp từ BerryZen, chiết xuất từ 100% nước ép dâu tây Đà Lạt, việt quất và mâm xôi tự nhiên. Sử dụng pectin táo tự nhiên thay thế hoàn toàn gelatin động vật, bổ sung vitamin C hữu cơ, dẻo dai mềm mại không dính răng.",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1582058091505-f87a2e55a40f?q=80&w=800",
+      "brand": "BerryZen",
+      "origin": "Việt Nam",
+      "cocoaPercentage": null,
+      "dietaryTags": ["VEGAN", "ORGANIC", "SUGAR_FREE"],
+      "isFeatured": true,
+      "isFlashSale": false,
+      "rating": 4.9,
+      "images": [
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1582058091505-f87a2e55a40f?q=80&w=800",
+          "altText": "Viên kẹo dẻo BerryZen hình quả mọng màu sắc tự nhiên",
+          "displayOrder": 1
+        },
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1581798459219-318e76aecc7b?q=80&w=800",
+          "altText": "Gói kẹo dẻo thuần chay BerryZen vị dâu tây và việt quất",
+          "displayOrder": 2
+        }
+      ],
+      "variants": [
+        {
+          "name": "Túi 100g Tiêu Chuẩn",
+          "sku": "SWL-CAND-001-100G",
+          "price": 65000,
+          "originalPrice": 75000,
+          "stockQuantity": 90,
+          "imageUrl": "https://images.unsplash.com/photo-1582058091505-f87a2e55a40f?q=80&w=800",
+          "displayOrder": 1
+        },
+        {
+          "name": "Gói Tiết Kiệm 250g",
+          "sku": "SWL-CAND-001-250G",
+          "price": 145000,
+          "originalPrice": 165000,
+          "stockQuantity": 60,
+          "imageUrl": "https://images.unsplash.com/photo-1581798459219-318e76aecc7b?q=80&w=800",
+          "displayOrder": 2
+        }
+      ],
+      "nutrition": {
+        "servingSize": "30g (khoảng 8-10 viên)",
+        "calories": 82.0,
+        "proteinG": 0.4,
+        "fatG": 0.1,
+        "saturatedFatG": 0.0,
+        "carbsG": 20.0,
+        "sugarG": 7.5,
+        "fiberG": 2.2,
+        "sodiumMg": 8.0,
+        "allergens": "Không gelatin, không phẩm màu nhân tạo, thuần chay 100%",
+        "ingredients": "Nước ép dâu tây hữu cơ (45%), nước ép việt quất (30%), pectin chiết xuất từ vỏ táo, đường mía thô hữu cơ, vitamin C"
+      }
+    },
+    {
+      "name": "Kẹo Ngậm Thảo Mộc BerryZen Bạc Hà & Cam Thảo Không Đường",
+      "slug": "keo-ngam-thao-moc-berryzen-bac-ha-cam-thao",
+      "sku": "SWL-CAND-002",
+      "price": 55000,
+      "originalPrice": null,
+      "stockQuantity": 130,
+      "description": "Kẹo ngậm thảo mộc BerryZen với công thức phối hợp tinh dầu bạc hà cay, rễ cam thảo và chiết xuất vỏ chanh vàng. Dùng đường ăn kiêng Isomalt tự nhiên từ củ cải đường, giúp thơm miệng sảng khoái và làm dịu êm cổ họng.",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1575224300306-1b8da36134ec?q=80&w=800",
+      "brand": "BerryZen",
+      "origin": "Việt Nam",
+      "cocoaPercentage": null,
+      "dietaryTags": ["SUGAR_FREE", "LOW_CARB", "ORGANIC"],
+      "isFeatured": false,
+      "isFlashSale": false,
+      "rating": 4.9,
+      "images": [
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1575224300306-1b8da36134ec?q=80&w=800",
+          "altText": "Hộp thiếc kẹo ngậm thảo mộc BerryZen the mát",
+          "displayOrder": 1
+        },
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?q=80&w=800",
+          "altText": "Viên ngậm thảo mộc tự nhiên thơm hương bạc hà",
+          "displayOrder": 2
+        }
+      ],
+      "variants": [
+        {
+          "name": "Hộp Thiếc 40g Vị Bạc Hà Truyền Thống",
+          "sku": "SWL-CAND-002-MINT",
+          "price": 55000,
+          "originalPrice": null,
+          "stockQuantity": 70,
+          "imageUrl": "https://images.unsplash.com/photo-1575224300306-1b8da36134ec?q=80&w=800",
+          "displayOrder": 1
+        },
+        {
+          "name": "Hộp Thiếc 40g Vị Chanh Gừng Ấm Họng",
+          "sku": "SWL-CAND-002-GINGER",
+          "price": 55000,
+          "originalPrice": null,
+          "stockQuantity": 60,
+          "imageUrl": "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?q=80&w=800",
+          "displayOrder": 2
+        }
+      ],
+      "nutrition": {
+        "servingSize": "40g (khoảng 20 viên)",
+        "calories": 75.0,
+        "proteinG": 0.0,
+        "fatG": 0.0,
+        "saturatedFatG": 0.0,
+        "carbsG": 28.0,
+        "sugarG": 0.0,
+        "fiberG": 0.0,
+        "sodiumMg": 2.0,
+        "allergens": "Không chứa đường saccarose, an toàn cho răng miệng và người tiểu đường",
+        "ingredients": "Đường ăn kiêng Isomalt, tinh dầu bạc hà tự nhiên, chiết xuất cam thảo, tinh chất chanh vàng"
+      }
+    },
+    {
+      "name": "Kẹo Que Hữu Cơ Không Đường The Sweet Lab Kids Vitamin C",
+      "slug": "keo-que-huu-co-khong-duong-the-sweet-lab-kids",
+      "sku": "SWL-CAND-003",
+      "price": 48000,
+      "originalPrice": 55000,
+      "stockQuantity": 140,
+      "description": "Kẹo que xoắn sắc màu cầu vồng độc quyền từ The Sweet Lab dành riêng cho trẻ nhỏ. Chiết xuất hoàn toàn từ nước ép táo và nho tím hữu cơ, màu sắc từ bột củ dền và hoa dành dành, làm ngọt bằng xylitol tự nhiên ngừa sâu răng hiệu quả.",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?q=80&w=800",
+      "brand": "The Sweet Lab Signature",
+      "origin": "Việt Nam",
+      "cocoaPercentage": null,
+      "dietaryTags": ["ORGANIC", "SUGAR_FREE", "VEGAN"],
+      "isFeatured": false,
+      "isFlashSale": true,
+      "rating": 4.8,
+      "images": [
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?q=80&w=800",
+          "altText": "Cây kẹo que xoắn cầu vồng hữu cơ cho bé",
+          "displayOrder": 1
+        },
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?q=80&w=800",
+          "altText": "Bộ kẹo mút không đường The Sweet Lab Kids",
+          "displayOrder": 2
+        }
+      ],
+      "nutrition": {
+        "servingSize": "15g (1 que kẹo)",
+        "calories": 35.0,
+        "proteinG": 0.0,
+        "fatG": 0.0,
+        "saturatedFatG": 0.0,
+        "carbsG": 12.0,
+        "sugarG": 0.5,
+        "fiberG": 0.8,
+        "sodiumMg": 3.0,
+        "allergens": "Không chất tạo màu, không hương liệu nhân tạo",
+        "ingredients": "Nước ép táo cô đặc hữu cơ, siro gạo lứt mầm, xylitol từ cây bạch dương, vitamin C, chiết xuất màu thực vật từ củ dền"
+      }
+    },
+    {
+      "name": "Kẹo Dẻo Cam Vàng & Chanh Dây BerryZen Tăng Đề Kháng",
+      "slug": "keo-deo-cam-vang-chanh-day-berryzen",
+      "sku": "SWL-CAND-004",
+      "price": 68000,
+      "originalPrice": 78000,
+      "stockQuantity": 110,
+      "description": "Viên kẹo dẻo vị cam vàng và chanh dây chua ngọt bùng nổ vị giác từ BerryZen. Bổ sung khoáng chất kẽm và vitamin C tăng cường miễn dịch mỗi ngày, kết cấu dai mềm dẻo từ rong biển Agar và pectin thực vật.",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1514733670139-4d87a1941d55?q=80&w=800",
+      "brand": "BerryZen",
+      "origin": "Việt Nam",
+      "cocoaPercentage": null,
+      "dietaryTags": ["VEGAN", "ORGANIC", "SUGAR_FREE"],
+      "isFeatured": false,
+      "isFlashSale": false,
+      "rating": 4.8,
+      "images": [
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1514733670139-4d87a1941d55?q=80&w=800",
+          "altText": "Kẹo dẻo lát cam vàng óng ả phủ đường dừa mịn màng",
+          "displayOrder": 1
+        },
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?q=80&w=800",
+          "altText": "Đĩa kẹo dẻo cam chanh dây BerryZen thơm ngát",
+          "displayOrder": 2
+        }
+      ],
+      "nutrition": {
+        "servingSize": "30g (khoảng 8-10 viên)",
+        "calories": 80.0,
+        "proteinG": 0.5,
+        "fatG": 0.1,
+        "saturatedFatG": 0.0,
+        "carbsG": 19.5,
+        "sugarG": 7.0,
+        "fiberG": 2.0,
+        "sodiumMg": 10.0,
+        "allergens": "Không gelatin, thuần chay 100%",
+        "ingredients": "Nước ép cam vàng nguyên chất (60%), nước cốt chanh dây tươi (20%), pectin thực vật táo, bột rong biển Agar, kẽm gluconate"
+      }
+    }
+  ]
+}

@@ -1,12 +1,14 @@
 package com.thesweetlabbe.modules.product.entity;
 
-import com.thesweetlabbe.common.entity.BaseEntity;
 import com.thesweetlabbe.modules.product.enums.DietaryTag;
 import com.thesweetlabbe.modules.product.enums.ProductStatus;
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.math.BigDecimal;
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -19,18 +21,26 @@ import java.util.UUID;
         @Index(name = "idx_product_sku", columnList = "sku", unique = true),
         @Index(name = "idx_product_category", columnList = "category_id"),
         @Index(name = "idx_product_price", columnList = "price"),
-        @Index(name = "idx_product_brand", columnList = "brand")
+        @Index(name = "idx_product_brand", columnList = "brand_id")
 })
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Product extends BaseEntity {
+public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
+
+    @CreationTimestamp
+    @Column(name = "created_at", nullable = false, updatable = false)
+    private Instant createdAt;
+
+    @UpdateTimestamp
+    @Column(name = "updated_at", nullable = false)
+    private Instant updatedAt;
 
     @Column(name = "name", nullable = false, length = 200)
     private String name;
@@ -61,8 +71,12 @@ public class Product extends BaseEntity {
     @JoinColumn(name = "category_id", nullable = false)
     private Category category;
 
-    @Column(name = "brand", length = 100)
-    private String brand;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "brand_id")
+    private Brand brand;
+
+    @Column(name = "brand_name", length = 100)
+    private String brandName;
 
     @Column(name = "origin", length = 100)
     private String origin;
@@ -100,4 +114,15 @@ public class Product extends BaseEntity {
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
     @Builder.Default
     private List<ProductImage> images = new ArrayList<>();
+
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
+    @Builder.Default
+    private List<ProductVariant> variants = new ArrayList<>();
+
+    public String getDisplayBrandName() {
+        if (brand != null && brand.getName() != null) {
+            return brand.getName();
+        }
+        return brandName;
+    }
 }

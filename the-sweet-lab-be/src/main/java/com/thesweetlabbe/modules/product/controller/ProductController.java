@@ -20,6 +20,13 @@ public class ProductController {
 
     private final ProductService productService;
 
+    @GetMapping
+    @Operation(summary = "Lấy toàn bộ danh sách sản phẩm")
+    public ResponseEntity<ApiResponse<List<ProductResponse>>> getAllProducts() {
+        List<ProductResponse> products = productService.getAllProducts();
+        return ResponseEntity.ok(ApiResponse.success("Lấy danh sách tất cả sản phẩm thành công", products));
+    }
+
     @GetMapping("/featured")
     @Operation(summary = "Lấy danh sách sản phẩm nổi bật hiển thị ở Trang chủ")
     public ResponseEntity<ApiResponse<List<ProductResponse>>> getFeaturedProducts() {

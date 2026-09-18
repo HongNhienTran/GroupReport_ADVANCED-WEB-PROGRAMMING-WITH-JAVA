@@ -33,6 +33,10 @@ set -euf
 [ "${MVNW_VERBOSE-}" != debug ] || set -x
 
 # OS specific support.
+if [ -z "${JAVA_HOME-}" ] && [ -d "/c/Program Files/Java/jdk-21" ]; then
+  export JAVA_HOME="/c/Program Files/Java/jdk-21"
+  export PATH="/c/Program Files/Java/jdk-21/bin:$PATH"
+fi
 native_path() { printf %s\\n "$1"; }
 case "$(uname)" in
 CYGWIN* | MINGW*)

@@ -1,6 +1,5 @@
 package com.thesweetlabbe.modules.product.entity;
 
-import com.thesweetlabbe.common.entity.BaseEntity;
 import com.thesweetlabbe.modules.product.enums.FlashSaleStatus;
 import jakarta.persistence.*;
 import lombok.*;
@@ -20,7 +19,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class FlashSale extends BaseEntity {
+public class FlashSale {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)

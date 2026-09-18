@@ -23,6 +23,8 @@ interface ProductsPageClientProps {
     initialProducts: Product[];
     categories: Category[];
     flashSales: FlashSaleProduct[];
+    initialSearch?: string;
+    initialCategory?: string;
 }
 
 // Danh mục chế độ ăn healthy
@@ -50,11 +52,13 @@ type SortOption = 'default' | 'price-asc' | 'price-desc' | 'name-asc' | 'name-de
 export default function ProductsPageClient({
     initialProducts,
     categories,
-    flashSales
+    flashSales,
+    initialSearch = '',
+    initialCategory = 'all'
 }: ProductsPageClientProps) {
     // 1. Bộ lọc state
-    const [searchQuery, setSearchQuery] = useState('');
-    const [selectedCategory, setSelectedCategory] = useState<string>('all');
+    const [searchQuery, setSearchQuery] = useState(initialSearch);
+    const [selectedCategory, setSelectedCategory] = useState<string>(initialCategory);
     const [selectedDiets, setSelectedDiets] = useState<string[]>([]);
     
     // Slider mức giá: min = 0, max = 500.000₫ (hoặc tùy biến)

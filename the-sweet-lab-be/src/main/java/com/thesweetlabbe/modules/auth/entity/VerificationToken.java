@@ -1,10 +1,10 @@
 package com.thesweetlabbe.modules.auth.entity;
 
-import com.thesweetlabbe.common.entity.BaseEntity;
 import com.thesweetlabbe.modules.auth.enums.TokenType;
 import com.thesweetlabbe.modules.user.entity.User;
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.Instant;
 import java.util.UUID;
@@ -18,11 +18,15 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class VerificationToken extends BaseEntity {
+public class VerificationToken {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
+
+    @CreationTimestamp
+    @Column(name = "created_at", nullable = false, updatable = false)
+    private Instant createdAt;
 
     @Column(name = "token", nullable = false, unique = true, length = 100)
     private String token;

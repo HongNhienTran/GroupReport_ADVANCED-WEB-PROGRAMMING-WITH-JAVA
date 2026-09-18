@@ -1,0 +1,220 @@
+{
+  "category": {
+    "name": "Hộp Quà & Combo Sức Khỏe",
+    "slug": "hop-qua-combo-suc-khoe",
+    "description": "Bộ quà tặng sức khỏe tinh tế, ý nghĩa cho người thân và đối tác",
+    "imageUrl": "/categories/Gifts.png",
+    "bannerUrl": "/categories/Gifts.png",
+    "displayOrder": 4
+  },
+  "products": [
+    {
+      "name": "Hộp Quà Sweetie Present Eco-Friendly Tinh Hoa Bánh Kẹo Healthy",
+      "slug": "hop-qua-sweetie-present-eco-friendly",
+      "sku": "SWL-GIFT-001",
+      "price": 450000,
+      "originalPrice": 520000,
+      "stockQuantity": 40,
+      "description": "Hộp quà làm từ giấy kraft sinh học thân thiện môi trường từ Sweetie Present, thắt nơ ruy băng lụa pastel sang trọng. Bên trong kết hợp hoàn hảo gồm: 1 thanh Socola Cacaovita 85%, 1 hũ bánh Biscotti NutriBloom hạnh nhân, 1 gói kẹo dẻo BerryZen pectin hữu cơ và 1 thiệp chúc mừng viết tay nghệ thuật.",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=800",
+      "brand": "Sweetie Present",
+      "origin": "Việt Nam",
+      "cocoaPercentage": null,
+      "dietaryTags": ["ORGANIC", "LOW_CARB"],
+      "isFeatured": true,
+      "isFlashSale": false,
+      "rating": 5.0,
+      "images": [
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=800",
+          "altText": "Hộp quà Sweetie Present Eco-Friendly thắt nơ lụa tinh tế",
+          "displayOrder": 1
+        },
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=800",
+          "altText": "Mở hộp quà bánh kẹo healthy với đầy đủ sản phẩm và thiệp chúc",
+          "displayOrder": 2
+        }
+      ],
+      "variants": [
+        {
+          "name": "Set Cơ Bản (Hộp Kraft + Nơ Lụa + 3 Món)",
+          "sku": "SWL-GIFT-001-STD",
+          "price": 450000,
+          "originalPrice": 520000,
+          "stockQuantity": 25,
+          "imageUrl": "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=800",
+          "displayOrder": 1
+        },
+        {
+          "name": "Set Cao Cấp (Hộp Vân Gỗ + Nơ Nhũ Vàng + 5 Món)",
+          "sku": "SWL-GIFT-001-LUX",
+          "price": 650000,
+          "originalPrice": 750000,
+          "stockQuantity": 15,
+          "imageUrl": "https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=800",
+          "displayOrder": 2
+        }
+      ],
+      "nutrition": {
+        "servingSize": "1 Hộp quà tổng hợp (khoảng 450g)",
+        "calories": 850.0,
+        "proteinG": 22.0,
+        "fatG": 35.0,
+        "saturatedFatG": 8.0,
+        "carbsG": 95.0,
+        "sugarG": 25.0,
+        "fiberG": 15.0,
+        "sodiumMg": 60.0,
+        "allergens": "Bao gồm nhiều dòng sản phẩm, có chứa hạt hạnh nhân, óc chó và yến mạch",
+        "ingredients": "Set quà kết hợp gồm Socola đen Cacaovita Đắk Lắk, Bánh biscotti hạnh nhân NutriBloom và Kẹo dẻo pectin hoa quả BerryZen"
+      }
+    },
+    {
+      "name": "Giỏ Mây Quà Tặng Sweetie Present Premium Hamper Đan Thủ Công",
+      "slug": "gio-may-qua-tang-sweetie-present-premium-hamper",
+      "sku": "SWL-GIFT-002",
+      "price": 790000,
+      "originalPrice": 890000,
+      "stockQuantity": 25,
+      "description": "Giỏ quà biếu Tết và sự kiện cao cấp từ Sweetie Present, đan từ mây tre tự nhiên bởi nghệ nhân thủ công Việt Nam. Đầy ắp các sản phẩm tuyển chọn từ các thương hiệu hàng đầu: bánh ngói KetoFlora, socola tươi PureChoc Artisans, bánh biscotti NutriBloom và trà thảo dược dưỡng nhan.",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?q=80&w=800",
+      "brand": "Sweetie Present",
+      "origin": "Việt Nam",
+      "cocoaPercentage": null,
+      "dietaryTags": ["ORGANIC", "KETO", "SUGAR_FREE"],
+      "isFeatured": true,
+      "isFlashSale": false,
+      "rating": 5.0,
+      "images": [
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?q=80&w=800",
+          "altText": "Giỏ quà mây tre Sweetie Present đầy ắp bánh kẹo healthy",
+          "displayOrder": 1
+        },
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=800",
+          "altText": "Cận cảnh giỏ mây thắt nơ ruy băng champagne quý phái",
+          "displayOrder": 2
+        }
+      ],
+      "variants": [
+        {
+          "name": "Giỏ Mây Cỡ Vừa (Size M - 4 Món)",
+          "sku": "SWL-GIFT-002-M",
+          "price": 790000,
+          "originalPrice": 890000,
+          "stockQuantity": 15,
+          "imageUrl": "https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?q=80&w=800",
+          "displayOrder": 1
+        },
+        {
+          "name": "Giỏ Mây Đại Thượng Hạng (Size L - 7 Món)",
+          "sku": "SWL-GIFT-002-L",
+          "price": 1190000,
+          "originalPrice": 1350000,
+          "stockQuantity": 10,
+          "imageUrl": "https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=800",
+          "displayOrder": 2
+        }
+      ],
+      "nutrition": {
+        "servingSize": "1 Giỏ quà hoàn chỉnh (khoảng 800g)",
+        "calories": 1450.0,
+        "proteinG": 38.0,
+        "fatG": 58.0,
+        "saturatedFatG": 16.0,
+        "carbsG": 130.0,
+        "sugarG": 35.0,
+        "fiberG": 24.0,
+        "sodiumMg": 90.0,
+        "allergens": "Chứa hạt dinh dưỡng, bơ cacao và yến mạch",
+        "ingredients": "Gồm các dòng bánh nướng ít ngọt, socola nguyên chất và kẹo thảo mộc từ các thương hiệu đối tác The Sweet Lab"
+      }
+    },
+    {
+      "name": "Hộp Quà Bánh Quy & Socola The Sweet Lab Signature Gift Box",
+      "slug": "hop-qua-the-sweet-lab-signature-gift-box",
+      "sku": "SWL-GIFT-003",
+      "price": 380000,
+      "originalPrice": 420000,
+      "stockQuantity": 50,
+      "description": "Bộ quà tặng signature độc quyền thiết kế với tông màu xanh ngọc bích và vàng champagne thanh lịch. Sự kết hợp giữa Socola bọc hạnh nhân The Sweet Lab và Bánh cookies yến mạch AuraBake, thích hợp làm quà tặng sinh nhật, tri ân đồng nghiệp và bạn bè.",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1512909006721-3d6018887383?q=80&w=800",
+      "brand": "The Sweet Lab Signature",
+      "origin": "Việt Nam",
+      "cocoaPercentage": null,
+      "dietaryTags": ["ORGANIC", "LOW_CARB"],
+      "isFeatured": false,
+      "isFlashSale": true,
+      "rating": 4.9,
+      "images": [
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1512909006721-3d6018887383?q=80&w=800",
+          "altText": "Hộp quà Signature The Sweet Lab màu pastel sang trọng",
+          "displayOrder": 1
+        },
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=800",
+          "altText": "Bên trong hộp quà được bày biện ngăn nắp tinh tế",
+          "displayOrder": 2
+        }
+      ],
+      "nutrition": {
+        "servingSize": "1 Hộp quà (khoảng 350g)",
+        "calories": 620.0,
+        "proteinG": 16.0,
+        "fatG": 28.0,
+        "saturatedFatG": 9.0,
+        "carbsG": 70.0,
+        "sugarG": 18.0,
+        "fiberG": 12.0,
+        "sodiumMg": 45.0,
+        "allergens": "Chứa hạnh nhân và yến mạch",
+        "ingredients": "Hạnh nhân bọc socola 70% The Sweet Lab, bánh cookies yến mạch socola chip AuraBake"
+      }
+    },
+    {
+      "name": "Bộ Phụ Kiện Gói Quà Sweetie Present Handmade & Thiệp Chúc Mừng",
+      "slug": "bo-phu-kien-goi-qua-sweetie-present-handmade",
+      "sku": "SWL-GIFT-004",
+      "price": 75000,
+      "originalPrice": 90000,
+      "stockQuantity": 200,
+      "description": "Set phụ kiện gói quà DIY độc quyền từ Sweetie Present để khách hàng tự do trang trí hộp bánh kẹo theo phong cách riêng. Gồm: 1 hộp giấy mỹ thuật dập nổi logo Sweetie ánh kim, 2 cuộn ruy băng lụa satin 2m, 50g giấy rơm lót chống sốc và 1 phong bao kèm thiệp viết tay ép kim.",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1513201099705-a9746e1e201f?q=80&w=800",
+      "brand": "Sweetie Present",
+      "origin": "Việt Nam",
+      "cocoaPercentage": null,
+      "dietaryTags": ["ORGANIC"],
+      "isFeatured": false,
+      "isFlashSale": false,
+      "rating": 5.0,
+      "images": [
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1513201099705-a9746e1e201f?q=80&w=800",
+          "altText": "Bộ phụ kiện hộp quà, ruy băng lụa và thiệp Sweetie Present",
+          "displayOrder": 1
+        },
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=800",
+          "altText": "Thiệp chúc mừng ép kim và cuộn ruy băng satin óng ả",
+          "displayOrder": 2
+        }
+      ],
+      "nutrition": {
+        "servingSize": "1 Bộ phụ kiện đóng gói",
+        "calories": 0.0,
+        "proteinG": 0.0,
+        "fatG": 0.0,
+        "saturatedFatG": 0.0,
+        "carbsG": 0.0,
+        "sugarG": 0.0,
+        "fiberG": 0.0,
+        "sodiumMg": 0.0,
+        "allergens": "Sản phẩm đóng gói, không dùng để ăn",
+        "ingredients": "Giấy mỹ thuật sinh học FSC, ruy băng lụa satin, giấy rơm kraft tự nhiên"
+      }
+    }
+  ]
+}

@@ -18,7 +18,9 @@ public enum ErrorCode {
     TOKEN_EXPIRED(1010, "Token has expired", HttpStatus.BAD_REQUEST),
     INVALID_REQUEST(1011, "Invalid request parameters", HttpStatus.BAD_REQUEST),
     EMAIL_SEND_FAILED(1012, "Failed to send email. Please try again later.", HttpStatus.INTERNAL_SERVER_ERROR),
-    RESOURCE_NOT_FOUND(1013, "Resource not found", HttpStatus.NOT_FOUND);
+    RESOURCE_NOT_FOUND(1013, "Resource not found", HttpStatus.NOT_FOUND),
+    FILE_UPLOAD_FAILED(1014, "Failed to upload file to storage", HttpStatus.INTERNAL_SERVER_ERROR),
+    INVALID_FILE_FORMAT(1015, "Invalid file format. Only image files (JPG, PNG, WEBP, GIF) are allowed.", HttpStatus.BAD_REQUEST);
 
     private final int code;
     private final String message;

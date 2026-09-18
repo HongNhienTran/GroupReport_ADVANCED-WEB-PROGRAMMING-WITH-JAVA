@@ -25,6 +25,10 @@ public class ApiResponse<T> {
     @Builder.Default
     private Instant timestamp = Instant.now();
 
+    public boolean isSuccess() {
+        return code == 1000;
+    }
+
     public static <T> ApiResponse<T> success(T data) {
         return ApiResponse.<T>builder()
                 .code(1000)

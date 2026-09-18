@@ -1,12 +1,14 @@
 package com.thesweetlabbe.modules.order.entity;
 
-import com.thesweetlabbe.common.entity.BaseEntity;
 import com.thesweetlabbe.modules.order.enums.OrderStatus;
 import com.thesweetlabbe.modules.user.entity.User;
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.math.BigDecimal;
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -23,11 +25,19 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Order extends BaseEntity {
+public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
+
+    @CreationTimestamp
+    @Column(name = "created_at", nullable = false, updatable = false)
+    private Instant createdAt;
+
+    @UpdateTimestamp
+    @Column(name = "updated_at", nullable = false)
+    private Instant updatedAt;
 
     @Column(name = "order_code", nullable = false, unique = true, length = 50)
     private String orderCode;
@@ -38,6 +48,9 @@ public class Order extends BaseEntity {
 
     @Column(name = "customer_name", nullable = false, length = 100)
     private String customerName;
+
+    @Column(name = "customer_email", nullable = false, length = 150)
+    private String customerEmail;
 
     @Column(name = "phone", nullable = false, length = 20)
     private String phone;

@@ -1,6 +1,5 @@
 package com.thesweetlabbe.modules.order.entity;
 
-import com.thesweetlabbe.common.entity.BaseEntity;
 import com.thesweetlabbe.modules.order.enums.DiscountType;
 import jakarta.persistence.*;
 import lombok.*;
@@ -20,7 +19,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Voucher extends BaseEntity {
+public class Voucher {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
