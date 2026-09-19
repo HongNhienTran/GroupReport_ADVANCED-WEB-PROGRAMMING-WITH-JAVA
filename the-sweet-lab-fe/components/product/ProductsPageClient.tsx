@@ -13,7 +13,8 @@ import {
     Sparkles,
     Flame,
     Plus,
-    Minus
+    Minus,
+    Star
 } from 'lucide-react';
 import { Product, Category, FlashSaleProduct } from '@/types/product';
 import FlashSale from '@/components/home/FlashSale';
@@ -459,7 +460,7 @@ export default function ProductsPageClient({
                                             }`}
                                         >
                                             <div className="flex items-center gap-1.5 text-amber-500 font-bold">
-                                                <span>⭐</span>
+                                                <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
                                                 <span>Từ {star} sao trở lên</span>
                                             </div>
                                             {isSelected && <Check className="w-3.5 h-3.5 text-amber-600 stroke-[3]" />}
@@ -520,9 +521,10 @@ export default function ProductsPageClient({
                                 )}
 
                                 {minRating > 0 && (
-                                    <span className="inline-flex items-center gap-1 bg-amber-50 text-amber-800 text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-amber-200">
-                                        ⭐ Từ {minRating} sao
-                                        <button onClick={() => setMinRating(0)}><X className="w-3 h-3 text-amber-600 hover:text-amber-900" /></button>
+                                    <span className="inline-flex items-center gap-1.5 bg-amber-50 text-amber-800 text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-amber-200">
+                                        <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                                        <span>Từ {minRating} sao</span>
+                                        <button onClick={() => setMinRating(0)}><X className="w-3 h-3 text-amber-600 hover:text-amber-900 ml-0.5" /></button>
                                     </span>
                                 )}
 
