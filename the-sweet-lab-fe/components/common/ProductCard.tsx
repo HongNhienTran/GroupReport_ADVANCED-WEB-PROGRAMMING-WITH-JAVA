@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { Heart, Plus } from 'lucide-react';
+import { Heart, Plus, Star } from 'lucide-react';
 import { ProductNutrition } from '@/types/product';
 
 export interface ProductCardProps {
@@ -108,7 +108,7 @@ export default function ProductCard({
                 {/* 4. Đánh giá Vote Review & Lượt bán */}
                 <div className="flex items-center justify-between text-[11px] mb-1 h-5 flex-shrink-0">
                     <div className="flex items-center gap-1 text-amber-500 font-semibold">
-                        <span>⭐</span>
+                        <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
                         <span>{rating.toFixed(1)}</span>
                         <span className="text-gray-400 text-[10px] font-normal">({reviewCount})</span>
                     </div>
@@ -127,8 +127,8 @@ export default function ProductCard({
                     {nutrition ? (
                         <>
                             {nutrition.calories && (
-                                <span className="text-emerald-700 font-medium bg-emerald-50 px-1.5 py-0.2 rounded">
-                                    🔥 {nutrition.calories} kcal
+                                <span className="text-emerald-700 font-medium bg-emerald-50 px-1.5 py-0.5 rounded">
+                                    {nutrition.calories} kcal
                                 </span>
                             )}
                             {nutrition.sugarG !== undefined && (
@@ -139,8 +139,8 @@ export default function ProductCard({
                             )}
                         </>
                     ) : (
-                        <span className="text-gray-400 bg-gray-50 px-1.5 py-0.2 rounded">
-                            🌿 100% Hữu cơ & Thuần chay
+                        <span className="text-gray-400 bg-gray-50 px-1.5 py-0.5 rounded">
+                            100% Hữu cơ & Thuần chay
                         </span>
                     )}
                 </div>

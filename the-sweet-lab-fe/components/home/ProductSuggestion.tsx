@@ -112,8 +112,8 @@ export default function ProductSuggestion({ products, categories }: ProductSugge
 
     return (
         <section className="w-full mt-24 sm:mt-32 md:mt-40 mb-16 md:mb-24">
-            {/* Khối 5 ngành hàng trải dài rộng toàn trang, lề trái phải cách vào vừa phải (không phủ sát mép như flashsale) */}
-            <div className="w-full px-4 sm:px-8 md:px-12 lg:px-16 mb-10">
+            {/* Khối 5 ngành hàng thu gọn vừa phải (max-w-5xl), căn giữa trang để dễ nhìn và cân đối */}
+            <div className="max-w-5xl mx-auto px-4 sm:px-6 mb-10">
                 {/* Header gợi ý - Căn chính giữa */}
                 <div className="flex flex-col items-center justify-center text-center mb-6 sm:mb-8">
                     <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">
@@ -121,10 +121,12 @@ export default function ProductSuggestion({ products, categories }: ProductSugge
                     </h2>
                 </div>
 
-                {/* 5 Khung Ảnh Đại Diện: Bao gồm Tất Cả Sản Phẩm (All.png) và 4 ngành hàng, trải rộng toàn trang */}
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-4 lg:gap-5">
+                {/* 5 Khung Ảnh Đại Diện: Bao gồm Tất Cả Sản Phẩm (All.png) và 4 ngành hàng */}
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5 lg:gap-6">
                     {displayCategoryCards.map((cat) => {
                         const isActive = activeTab === cat.id;
+                        const isAll = cat.id === 'ALL';
+
                         return (
                             <button
                                 key={cat.id}
@@ -132,15 +134,35 @@ export default function ProductSuggestion({ products, categories }: ProductSugge
                                 onClick={() => setActiveTab(cat.id)}
                                 className="group flex flex-col items-center cursor-pointer text-center select-none"
                             >
-                                {/* Khung ảnh: Chiều cao thấp hơn (tỷ lệ 2:1), vuông góc không radius */}
-                                <div className="w-full aspect-[2/1] overflow-hidden bg-slate-50 transition-all duration-200">
-                                    <img
-                                        src={cat.imageUrl}
-                                        alt={cat.name}
-                                        className="w-full h-full object-cover object-center pointer-events-none"
-                                        loading="lazy"
-                                    />
-                                </div>
+                                {isAll ? (
+                                    /* Giữ nguyên ALL: hình chữ nhật tỷ lệ 2:1 */
+                                    <div className="w-full aspect-[2/1] overflow-hidden bg-slate-50 transition-all duration-200">
+                                        <img
+                                            src={cat.imageUrl}
+                                            alt={cat.name}
+                                            className="w-full h-full object-cover object-center pointer-events-none"
+                                            loading="lazy"
+                                        />
+                                    </div>
+                                ) : (
+                                    /* 4 loại còn lại: hình tròn đường kính bằng đúng độ cao của ALL (50% bề rộng cột), nền trong suốt, border nhẹ như card thương hiệu, zoom to mượt mà khi hover */
+                                    <div className="w-full aspect-[2/1] flex items-center justify-center">
+                                        <div
+                                            className={`w-1/2 max-w-[50%] max-h-full aspect-square min-w-0 min-h-0 rounded-full border overflow-hidden flex items-center justify-center transition-all duration-300 ease-out group-hover:scale-110 group-hover:shadow-md ${
+                                                isActive
+                                                    ? 'border-emerald-600 shadow-xs'
+                                                    : 'border-slate-200/90 shadow-2xs group-hover:border-emerald-400'
+                                            }`}
+                                        >
+                                            <img
+                                                src={cat.imageUrl}
+                                                alt={cat.name}
+                                                className="w-full h-full object-contain p-1 pointer-events-none"
+                                                loading="lazy"
+                                            />
+                                        </div>
+                                    </div>
+                                )}
 
                                 {/* Tên ngành hàng đặt phía dưới ảnh */}
                                 <div className="mt-2.5 sm:mt-3 flex flex-col items-center">
