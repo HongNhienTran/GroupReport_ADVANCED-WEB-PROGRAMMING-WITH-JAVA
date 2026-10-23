@@ -1,0 +1,145 @@
+package com.thesweetlabbe.service.impl;
+
+import com.thesweetlabbe.enums.ErrorCode;
+import com.thesweetlabbe.exception.AppException;
+import com.thesweetlabbe.dto.ProductNutritionResponse;
+import com.thesweetlabbe.dto.ProductResponse;
+import com.thesweetlabbe.entity.Product;
+import com.thesweetlabbe.entity.ProductImage;
+import com.thesweetlabbe.entity.ProductNutrition;
+import com.thesweetlabbe.enums.ProductStatus;
+import com.thesweetlabbe.repository.ProductRepository;
+import com.thesweetlabbe.service.ProductService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+import java.util.UUID;
+
+@Service
+@RequiredArgsConstructor
+@Transactional(readOnly = true)
+public class ProductServiceImpl implements ProductService {
+
+    private final ProductRepository productRepository;
+
+    @Override
+    public List<ProductResponse> getAllProducts() {
+        return productRepository.findAll()
+                .stream()
+                .map(this::mapToResponse)
+                .toList();
+    }
+
+    @Override
+    public List<ProductResponse> getFeaturedProducts() {
+        return productRepository.findByIsFeaturedTrueAndStatus(ProductStatus.ACTIVE)
+                .stream()
+                .map(this::mapToResponse)
+                .toList();
+    }
+
+    @Override
+    public List<ProductResponse> getFlashSaleProducts() {
+        return productRepository.findByIsFlashSaleTrueAndStatus(ProductStatus.ACTIVE)
+                .stream()
+                .map(this::mapToResponse)
+                .toList();
+    }
+
+    @Override
+    public ProductResponse getProductBySlug(String slug) {
+        Product product = productRepository.findBySlug(slug)
+                .orElseThrow(() -> new AppException(ErrorCode.RESOURCE_NOT_FOUND));
+        return mapToResponse(product);
+    }
+
+    @Override
+    public ProductResponse getProductById(UUID id) {
+        Product product = productRepository.findById(id)
+                .orElseThrow(() -> new AppException(ErrorCode.RESOURCE_NOT_FOUND));
+        return mapToResponse(product);
+    }
+
+    private ProductResponse mapToResponse(Product product) {
+        ProductNutritionResponse nutritionResponse = null;
+        if (product.getNutrition() != null) {
+            ProductNutrition n = product.getNutrition();
+            nutritionResponse = ProductNutritionResponse.builder()
+                    .servingSize(n.getServingSize())
+                    .calories(n.getCalories())
+                    .proteinG(n.getProteinG())
+                    .fatG(n.getFatG())
+                    .saturatedFatG(n.getSaturatedFatG())
+                    .carbsG(n.getCarbsG())
+                    .sugarG(n.getSugarG())
+                    .fiberG(n.getFiberG())
+                    .sodiumMg(n.getSodiumMg())
+                    .allergens(n.getAllergens())
+                    .ingredients(n.getIngredients())
+                    .build();
+        }
+
+        List<String> imageUrls = product.getImages().stream()
+                .map(ProductImage::getImageUrl)
+                .toList();
+
+        // Map Brand
+        com.thesweetlabbe.dto.BrandResponse brandResponse = null;
+        if (product.getBrand() != null) {
+            com.thesweetlabbe.entity.Brand b = product.getBrand();
+            brandResponse = com.thesweetlabbe.dto.BrandResponse.builder()
+                    .id(b.getId())
+                    .name(b.getName())
+                    .slug(b.getSlug())
+                    .logoUrl(b.getLogoUrl())
+                    .description(b.getDescription())
+                    .originCountry(b.getOriginCountry())
+                    .websiteUrl(b.getWebsiteUrl())
+                    .build();
+        }
+
+        // Map Variants
+        List<com.thesweetlabbe.dto.ProductVariantResponse> variantResponses = product.getVariants().stream()
+                .map(v -> com.thesweetlabbe.dto.ProductVariantResponse.builder()
+                        .id(v.getId())
+                        .name(v.getName())
+                        .sku(v.getSku())
+                        .price(v.getPrice())
+                        .originalPrice(v.getOriginalPrice())
+                        .stockQuantity(v.getStockQuantity())
+                        .imageUrl(v.getImageUrl())
+                        .displayOrder(v.getDisplayOrder())
+                        .inStock(v.getStockQuantity() != null && v.getStockQuantity() > 0)
+                        .build())
+                .toList();
+
+        return ProductResponse.builder()
+                .id(product.getId())
+                .name(product.getName())
+                .slug(product.getSlug())
+                .sku(product.getSku())
+                .price(product.getPrice())
+                .originalPrice(product.getOriginalPrice())
+                .stockQuantity(product.getStockQuantity())
+                .description(product.getDescription())
+                .thumbnailUrl(product.getThumbnailUrl())
+                .categoryId(product.getCategory() != null ? product.getCategory().getId() : null)
+                .categoryName(product.getCategory() != null ? product.getCategory().getName() : null)
+                .categorySlug(product.getCategory() != null ? product.getCategory().getSlug() : null)
+                .brand(product.getDisplayBrandName())
+                .brandDetail(brandResponse)
+                .origin(product.getOrigin())
+                .cocoaPercentage(product.getCocoaPercentage())
+                .dietaryTags(product.getDietaryTags())
+                .isFeatured(product.isFeatured())
+                .isFlashSale(product.isFlashSale())
+                .rating(product.getRating())
+                .status(product.getStatus())
+                .nutrition(nutritionResponse)
+                .images(imageUrls)
+                .variants(variantResponses)
+                .build();
+    }
+}
