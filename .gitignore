@@ -1,5 +1,16 @@
-# Documentation (Local only)
-docs/
+# Environment & Secrets
+.env
+**/.env
+*.local
+
+# Dependencies & Build Outputs
+node_modules/
+**/node_modules/
+target/
+**/target/
+dist/
+**/dist/
+build/
 
 # IDE & OS
 .idea/
@@ -7,9 +18,4 @@ docs/
 *.iml
 .DS_Store
 Thumbs.db
-
-# Environment Variables & Secrets
-.env
-.env.local
-*.env
-!.env.example
+*.log

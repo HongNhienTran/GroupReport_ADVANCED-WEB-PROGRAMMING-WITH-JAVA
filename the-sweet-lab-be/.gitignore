@@ -4,12 +4,6 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-# Environment Variables & Secrets
-.env
-.env.local
-*.env
-!.env.example
-
 ### STS ###
 .apt_generated
 .classpath
@@ -37,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Environment ###
+.env

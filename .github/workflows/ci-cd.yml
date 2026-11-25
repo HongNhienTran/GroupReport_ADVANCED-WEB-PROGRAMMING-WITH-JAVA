@@ -1,0 +1,109 @@
+name: The Sweet Lab CI/CD
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+  workflow_dispatch:
+
+jobs:
+  backend-ci:
+    name: Backend Build (Spring Boot 3 / Java 21)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: the-sweet-lab-be
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+          cache-dependency-path: the-sweet-lab-be/pom.xml
+
+      - name: Grant execute permission for Maven Wrapper
+        run: chmod +x mvnw
+
+      - name: Compile and package backend JAR
+        run: ./mvnw -B clean test-compile package -DskipTests
+
+      - name: Upload backend JAR artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: the-sweet-lab-be-jar
+          path: the-sweet-lab-be/target/*.jar
+          retention-days: 7
+
+  frontend-ci:
+    name: Storefront Build (React / Vite)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: the-sweet-lab-fe
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: the-sweet-lab-fe/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build storefront bundle
+        run: npm run build
+
+      - name: Upload storefront dist artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: the-sweet-lab-fe-dist
+          path: the-sweet-lab-fe/dist
+          retention-days: 7
+
+  admin-ci:
+    name: Admin Dashboard Build (React / Vite)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: the-sweet-lab-admin
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: the-sweet-lab-admin/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build admin bundle
+        run: npm run build
+
+      - name: Upload admin dist artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: the-sweet-lab-admin-dist
+          path: the-sweet-lab-admin/dist
+          retention-days: 7
+
+  verify-release:
+    name: Verify All Artifacts Ready
+    needs: [backend-ci, frontend-ci, admin-ci]
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Release check passed
+        run: echo "Backend JAR, Storefront dist, and Admin dist built successfully."
